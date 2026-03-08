@@ -558,7 +558,7 @@ def run():
 
     # Kill Zone alert
     if is_kill_zone():
-        send_telegram(f"⚡ <b>KILL ZONE ACTIVE</b>\n{kz}\n🎯 High probability setups incoming!")
+        send_telegram(f"⚡ <b>KILL ZONE ACTIVE</b>\n{kz}\n🎯 Focus! High probability setups incoming!")
 
     strong_signals = []
     all_results = []
@@ -691,20 +691,13 @@ def run():
                 if s >= MIN_SIGNAL_SCORE and prob >= MIN_WIN_PROB]
 
     if filtered:
-        send_telegram(header + f"\n🎯 <b>{len(filtered)} STRONG SIGNAL(S) FOUND</b>")
+        kz_tag = "⚡ <b>KILL ZONE SIGNAL</b>\n" if is_kill_zone() else ""
+        send_telegram(kz_tag + header + f"\n🎯 <b>{len(filtered)} SIGNAL(S) — ACT NOW</b>")
         for name, price, res, score, prob, msg in filtered:
             send_telegram(msg)
             print(f"  ✅ SENT: {name} | Score:{score} | Prob:{prob}%")
     else:
-        # Send summary of best available
-        best = sorted(all_results, key=lambda x: x[3], reverse=True)[:3]
-        if best:
-            send_telegram(header + f"\n⚪ No strong signals. Best available:")
-            for name, price, res, score, prob, msg in best:
-                send_telegram(msg)
-                print(f"  📊 WEAK: {name} | Score:{score} | Prob:{prob}%")
-        else:
-            send_telegram(header + "\n😴 No signals this cycle.")
+        print(f"  No strong signals this cycle — nothing sent")
 
     print(f"\n  Next update: 15 min\n")
 
