@@ -704,7 +704,7 @@ def run():
                 send_telegram(msg)
                 print(f"  📊 WEAK: {name} | Score:{score} | Prob:{prob}%")
         else:
-            print("  No strong signals this cycle — nothing sent")
+            send_telegram(header + "\n😴 No signals this cycle.")
 
     print(f"\n  Next update: 15 min\n")
 
