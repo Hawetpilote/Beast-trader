@@ -21,6 +21,8 @@ active_trades = []  # open trades being monitored
 daily_stats = {"date": "", "wins": 0, "losses": 0, "tp1_hits": 0, "tp2_hits": 0, "trades": []}
 daily_report_sent = False
 cycle_count = 0
+last_sent = {}  # {pair: timestamp} cooldown tracker
+COOLDOWN_SECONDS = 1800  # 30 min
 
 # ========== TELEGRAM ==========
 def send_telegram(message):
@@ -1041,6 +1043,7 @@ def run():
         for name, price, res, score, prob, msg in filtered:
             send_telegram(msg)
             print(f"  SENT: {name} | Score:{score} | Prob:{prob}%")
+            last_sent[name] = time.time()
             # Parse entry/sl/tp from signal and add to tracker
             try:
                 direction = "WAIT"
