@@ -13,9 +13,13 @@ TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
 MIN_SIGNAL_SCORE = 7
 MIN_WIN_PROB = 65
 MIN_ADX = 20
-HEARTBEAT_INTERVAL = 30  # Send status every 2 cycles (2 x 15min = 30min)
+HEARTBEAT_INTERVAL = 30  # every 30 cycles = 30 min
+ALGERIA_UTC_OFFSET = 1   # Algeria = UTC+1
 
-# Global cycle counter
+# ========== TRADE TRACKER ==========
+active_trades = []  # open trades being monitored
+daily_stats = {"date": "", "wins": 0, "losses": 0, "tp1_hits": 0, "tp2_hits": 0, "trades": []}
+daily_report_sent = False
 cycle_count = 0
 
 # ========== TELEGRAM ==========
@@ -147,12 +151,36 @@ def get_forex_price(base, quote):
 
 # ========== FIX: CORRECT GOLD PRICE ==========
 def get_gold_price():
+    """Get real XAU/USD spot price ~3100"""
+    # Source 1: metals.live (real spot price)
     try:
-        r = requests.get("https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF",
-            headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
-        return float(r.json()["chart"]["result"][0]["meta"]["regularMarketPrice"])
+        r = requests.get("https://api.metals.live/v1/spot/gold", timeout=10)
+        data = r.json()
+        if isinstance(data, list) and len(data) > 0:
+            price = float(data[0].get("price", 0))
+            if 2000 < price < 5000:  # sanity check
+                return price
     except:
-        return None
+        pass
+    # Source 2: open.er-api XAU
+    try:
+        r = requests.get("https://open.er-api.com/v6/latest/XAU", timeout=10)
+        price = float(r.json()["rates"]["USD"])
+        if 2000 < price < 5000:
+            return price
+    except:
+        pass
+    # Source 3: Yahoo Finance XAUUSD=X (spot)
+    try:
+        r = requests.get("https://query1.finance.yahoo.com/v8/finance/chart/XAUUSD%3DX",
+            headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
+        price = float(r.json()["chart"]["result"][0]["meta"]["regularMarketPrice"])
+        if 2000 < price < 5000:
+            return price
+    except:
+        pass
+    return None
+
 def get_funding(symbol):
     try:
         r = requests.get("https://fapi.binance.com/fapi/v1/fundingRate",
@@ -486,6 +514,217 @@ def format_message(name, price, analysis, extra_info=""):
     msg += f"\n{analysis}"
     return msg, score, prob
 
+# ========== TRADE TRACKER ==========
+def algeria_time():
+    """Get current Algeria time (UTC+1)"""
+    from datetime import timedelta
+    return datetime.now(timezone.utc) + timedelta(hours=ALGERIA_UTC_OFFSET)
+
+def reset_daily_stats_if_new_day():
+    global daily_stats, daily_report_sent
+    today = algeria_time().strftime("%Y-%m-%d")
+    if daily_stats["date"] != today:
+        daily_stats = {"date": today, "wins": 0, "losses": 0, "tp1_hits": 0, "tp2_hits": 0, "trades": []}
+        daily_report_sent = False
+        print(f"  [TRACKER] New day: {today}")
+
+def get_current_price(pair):
+    """Get live price for any pair"""
+    try:
+        if pair == "BTC/USD":
+            r = requests.get("https://fapi.binance.com/fapi/v1/ticker/price?symbol=BTCUSDT", timeout=5)
+            return float(r.json()["price"])
+        elif pair == "ETH/USD":
+            r = requests.get("https://fapi.binance.com/fapi/v1/ticker/price?symbol=ETHUSDT", timeout=5)
+            return float(r.json()["price"])
+        elif pair == "EUR/USD":
+            r = requests.get("https://open.er-api.com/v6/latest/EUR", timeout=5)
+            return float(r.json()["rates"]["USD"])
+        elif pair == "GBP/USD":
+            r = requests.get("https://open.er-api.com/v6/latest/GBP", timeout=5)
+            return float(r.json()["rates"]["USD"])
+        elif pair == "USD/JPY":
+            r = requests.get("https://open.er-api.com/v6/latest/USD", timeout=5)
+            return float(r.json()["rates"]["JPY"])
+        elif pair == "USD/CHF":
+            r = requests.get("https://open.er-api.com/v6/latest/USD", timeout=5)
+            return float(r.json()["rates"]["CHF"])
+        elif pair == "XAU/USD":
+            r = requests.get("https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF",
+                headers={"User-Agent": "Mozilla/5.0"}, timeout=5)
+            return float(r.json()["chart"]["result"][0]["meta"]["regularMarketPrice"])
+        elif pair == "USTEC":
+            r = requests.get("https://query1.finance.yahoo.com/v8/finance/chart/%5ENDX",
+                headers={"User-Agent": "Mozilla/5.0"}, timeout=5)
+            return float(r.json()["chart"]["result"][0]["meta"]["regularMarketPrice"])
+        elif pair == "US30":
+            r = requests.get("https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI",
+                headers={"User-Agent": "Mozilla/5.0"}, timeout=5)
+            return float(r.json()["chart"]["result"][0]["meta"]["regularMarketPrice"])
+    except:
+        pass
+    return None
+
+def add_active_trade(pair, direction, entry, sl, tp1, tp2, score, prob):
+    """Add a new trade to monitoring list"""
+    global active_trades
+    # Remove existing trade for same pair
+    active_trades = [t for t in active_trades if t["pair"] != pair]
+    active_trades.append({
+        "pair":      pair,
+        "direction": direction,
+        "entry":     entry,
+        "sl":        sl,
+        "tp1":       tp1,
+        "tp2":       tp2,
+        "score":     score,
+        "prob":      prob,
+        "time":      algeria_time().strftime("%H:%M"),
+        "hit_tp1":   False,
+        "status":    "OPEN"
+    })
+    print(f"  [TRACKER] Monitoring {pair} {direction} | SL:{sl} TP1:{tp1} TP2:{tp2}")
+
+def check_active_trades():
+    """Check all open trades and update status"""
+    global active_trades, daily_stats
+    if not active_trades:
+        return
+    for trade in active_trades:
+        if trade["status"] != "OPEN":
+            continue
+        price = get_current_price(trade["pair"])
+        if not price:
+            continue
+        direction = trade["direction"]
+        try:
+            sl   = float(trade["sl"])
+            tp1  = float(trade["tp1"])
+            tp2  = float(trade["tp2"])
+            entry = float(trade["entry"])
+        except:
+            continue
+
+        # Check BUY trade
+        if direction == "BUY":
+            if price <= sl:
+                trade["status"] = "LOSS"
+                record_result(trade, "LOSS", price)
+            elif price >= tp2:
+                trade["status"] = "WIN_TP2"
+                record_result(trade, "WIN_TP2", price)
+            elif price >= tp1 and not trade["hit_tp1"]:
+                trade["hit_tp1"] = True
+                notify_tp1(trade, price)
+
+        # Check SELL trade
+        elif direction == "SELL":
+            if price >= sl:
+                trade["status"] = "LOSS"
+                record_result(trade, "LOSS", price)
+            elif price <= tp2:
+                trade["status"] = "WIN_TP2"
+                record_result(trade, "WIN_TP2", price)
+            elif price <= tp1 and not trade["hit_tp1"]:
+                trade["hit_tp1"] = True
+                notify_tp1(trade, price)
+
+    # Remove closed trades
+    active_trades = [t for t in active_trades if t["status"] == "OPEN"]
+
+def notify_tp1(trade, price):
+    """Notify when TP1 is hit"""
+    daily_stats["tp1_hits"] += 1
+    msg = (
+        f"🎯 <b>TP1 HIT!</b>\n"
+        f"📊 {trade['pair']} | {trade['direction']}\n"
+        f"⏰ Entry: {trade['time']} | Now: {algeria_time().strftime('%H:%M')}\n"
+        f"✅ TP1 reached: <b>{price}</b>\n"
+        f"👀 Watching for TP2: {trade['tp2']}\n"
+        f"🛡️ Move SL to entry for free trade!"
+    )
+    send_telegram(msg)
+    print(f"  [TRACKER] TP1 hit: {trade['pair']}")
+
+def record_result(trade, result, price):
+    """Record final trade result"""
+    now = algeria_time().strftime("%H:%M")
+    if result in ["WIN_TP1", "WIN_TP2"]:
+        daily_stats["wins"] += 1
+        if result == "WIN_TP2":
+            daily_stats["tp2_hits"] += 1
+        emoji = "✅"
+        result_text = "WIN TP2 ✅" if result == "WIN_TP2" else "WIN TP1 ✅"
+        msg = (
+            f"✅ <b>TRADE CLOSED — WIN!</b>\n"
+            f"📊 {trade['pair']} | {trade['direction']}\n"
+            f"⏰ Entry: {trade['time']} → Close: {now}\n"
+            f"💰 TP2 hit at: <b>{price}</b>\n"
+            f"📈 Score was: {trade['score']}/10 | Prob: {trade['prob']}%\n"
+            f"🏆 Today: {daily_stats['wins']}W / {daily_stats['losses']}L"
+        )
+    else:
+        daily_stats["losses"] += 1
+        emoji = "❌"
+        result_text = "LOSS ❌"
+        msg = (
+            f"❌ <b>TRADE CLOSED — LOSS</b>\n"
+            f"📊 {trade['pair']} | {trade['direction']}\n"
+            f"⏰ Entry: {trade['time']} → Close: {now}\n"
+            f"🛑 SL hit at: <b>{price}</b>\n"
+            f"📈 Score was: {trade['score']}/10 | Prob: {trade['prob']}%\n"
+            f"📊 Today: {daily_stats['wins']}W / {daily_stats['losses']}L"
+        )
+
+    daily_stats["trades"].append({
+        "pair":      trade["pair"],
+        "direction": trade["direction"],
+        "entry":     trade["entry"],
+        "close":     price,
+        "result":    result_text,
+        "time":      now
+    })
+    send_telegram(msg)
+    print(f"  [TRACKER] {trade['pair']} → {result_text} at {price}")
+
+def send_daily_report():
+    """Send daily summary at 23:59 Algeria time"""
+    global daily_report_sent
+    if daily_report_sent:
+        return
+    now = algeria_time()
+    total = daily_stats["wins"] + daily_stats["losses"]
+    win_rate = round(daily_stats["wins"] / total * 100) if total > 0 else 0
+    bar_filled = int(win_rate / 10)
+    bar = "█" * bar_filled + "░" * (10 - bar_filled)
+
+    lines = []
+    lines.append(f"📊 <b>DAILY REPORT — {daily_stats['date']}</b>")
+    lines.append(f"{'─'*30}")
+    lines.append(f"✅ Wins:   <b>{daily_stats['wins']}</b>")
+    lines.append(f"❌ Losses: <b>{daily_stats['losses']}</b>")
+    lines.append(f"📈 Total:  <b>{total}</b> trades")
+    lines.append(f"🎯 Win Rate: <b>{win_rate}%</b> [{bar}]")
+    lines.append(f"🎯 TP1 hits: {daily_stats['tp1_hits']}")
+    lines.append(f"🏆 TP2 hits: {daily_stats['tp2_hits']}")
+    lines.append(f"{'─'*30}")
+
+    if daily_stats["trades"]:
+        lines.append(f"<b>Trade History:</b>")
+        for t in daily_stats["trades"]:
+            lines.append(f"• {t['pair']} {t['direction']} @ {t['entry']} → {t['result']} ({t['time']})")
+
+    if win_rate >= 70:
+        lines.append(f"\n🔥 Excellent day! Keep it up!")
+    elif win_rate >= 50:
+        lines.append(f"\n👍 Good day! Profitable session.")
+    else:
+        lines.append(f"\n💪 Tough day. Review and improve tomorrow.")
+
+    send_telegram("\n".join(lines))
+    daily_report_sent = True
+    print(f"  [TRACKER] Daily report sent")
+
 # ========== STATUS REPORT (every 30 min) ==========
 def send_status_report(all_results):
     now = datetime.now(timezone.utc)
@@ -524,6 +763,11 @@ def send_status_report(all_results):
     lines.append(f"{'─'*30}")
     lines.append(f"🏦 Forex/Gold: {'🟢 OPEN' if open_status_forex else '🔴 CLOSED'}")
     lines.append(f"📊 Indices: {'🟢 OPEN' if open_status_index else '🔴 CLOSED'}")
+    total = daily_stats["wins"] + daily_stats["losses"]
+    win_rate = round(daily_stats["wins"] / total * 100) if total > 0 else 0
+    lines.append(f"{'─'*30}")
+    lines.append(f"📅 Today ({daily_stats['date']}): ✅{daily_stats['wins']}W ❌{daily_stats['losses']}L | WR: {win_rate}%")
+    lines.append(f"🔍 Active trades: {len(active_trades)}")
     lines.append(f"⚙️ Bot running normally ✅")
 
     send_telegram("\n".join(lines))
@@ -670,7 +914,7 @@ def run():
     if filtered:
         kz_tag = "⚡ KILL ZONE SIGNAL\n" if is_kill_zone() else ""
         header = (
-            f"🤖 <b>BEAST TRADER v5.1</b>\n"
+            f"🤖 <b>BEAST TRADER v5.2</b>\n"
             f"⏰ {now.strftime('%H:%M')} UTC | {kz}\n"
             f"🎯 <b>{len(filtered)} SIGNAL(S)</b>\n"
             f"{'─'*30}"
@@ -679,6 +923,26 @@ def run():
         for name, price, res, score, prob, msg in filtered:
             send_telegram(msg)
             print(f"  SENT: {name} | Score:{score} | Prob:{prob}%")
+            # Parse entry/sl/tp from signal and add to tracker
+            try:
+                direction = "WAIT"
+                entry = sl = tp1 = tp2 = None
+                for line in res.split("\n"):
+                    line = line.strip()
+                    if line.startswith("DIRECTION:"):
+                        direction = line.split(":")[1].strip().split()[0]
+                    elif line.startswith("ENTRY:"):
+                        entry = float("".join(c for c in line.split(":")[1] if c.isdigit() or c == "."))
+                    elif line.startswith("SL:"):
+                        sl = float("".join(c for c in line.split(":")[1].split()[0] if c.isdigit() or c == "."))
+                    elif line.startswith("TP1:"):
+                        tp1 = float("".join(c for c in line.split(":")[1].split()[0] if c.isdigit() or c == "."))
+                    elif line.startswith("TP2:"):
+                        tp2 = float("".join(c for c in line.split(":")[1].split()[0] if c.isdigit() or c == "."))
+                if direction in ["BUY", "SELL"] and entry and sl and tp1 and tp2:
+                    add_active_trade(name, direction, entry, sl, tp1, tp2, score, prob)
+            except Exception as e:
+                print(f"  [TRACKER] Parse error: {e}")
     else:
         print(f"  No strong signals — nothing sent")
 
@@ -689,21 +953,34 @@ def run():
 # ========== ENTRY POINT ==========
 if __name__ == "__main__":
     send_telegram(
-        "🚀 <b>BEAST TRADER v5.1 STARTED</b>\n"
-        "✅ Fixed: GBP/USD real price\n"
-        "✅ Fixed: XAU/USD real spot price\n"
-        "✅ Fixed: USD/JPY + USD/CHF analysis\n"
+        "🚀 <b>BEAST TRADER v5.2 STARTED</b>\n"
+        "✅ Trade result tracking added\n"
+        "📊 Daily report at 23:59 Algeria time\n"
         "📡 Status report every 30 minutes\n"
-        "⚙️ Scanning every 15 minutes..."
+        "⚙️ Scanning every 1 minute..."
     )
     cycle_count = 0
     while True:
         try:
+            # Reset daily stats if new day
+            reset_daily_stats_if_new_day()
+
+            # Check active trades (TP/SL hit?)
+            check_active_trades()
+
+            # Run main analysis
             all_results = run()
             cycle_count += 1
-            # Send status report every 2 cycles = 30 min
+
+            # Status report every 30 min
             if cycle_count % HEARTBEAT_INTERVAL == 0:
                 send_status_report(all_results)
+
+            # Daily report at 23:59 Algeria time
+            now_alg = algeria_time()
+            if now_alg.hour == 23 and now_alg.minute == 59 and not daily_report_sent:
+                send_daily_report()
+
         except Exception as e:
             print(f"[CRITICAL] {e}")
             send_telegram(f"⚠️ Error: {e}")
