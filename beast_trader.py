@@ -13,7 +13,7 @@ TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
 MIN_SIGNAL_SCORE = 7
 MIN_WIN_PROB = 65
 MIN_ADX = 20
-HEARTBEAT_INTERVAL = 2  # Send status every 2 cycles (2 x 15min = 30min)
+HEARTBEAT_INTERVAL = 30  # Send status every 2 cycles (2 x 15min = 30min)
 
 # Global cycle counter
 cycle_count = 0
