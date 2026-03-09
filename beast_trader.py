@@ -7,11 +7,26 @@ from datetime import datetime, timezone
 # ========== CONFIG ==========
 GROQ_KEY = os.environ.get("GROQ_KEY", "")
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
-GROQ_MODEL = "llama-3.3-70b-versatile"
+GROQ_MODEL = "llama-3.1-8b-instant"
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
 MIN_SIGNAL_SCORE = 7
-MIN_WIN_PROB = 65
+COOLDOWN_SECONDS = 1800
+COOLDOWN_FILE = "/tmp/last_sent.json"
+
+def load_last_sent():
+    try:
+        import json
+        return json.load(open(COOLDOWN_FILE))
+    except:
+        return {}
+
+def save_last_sent(d):
+    import json
+    json.dump(d, open(COOLDOWN_FILE, "w"))
+
+last_sent = load_last_sent()
+MIN_WIN_PROB = 60
 MIN_ADX = 20
 HEARTBEAT_INTERVAL = 30  # every 30 cycles = 30 min
 ALGERIA_UTC_OFFSET = 1   # Algeria = UTC+1
