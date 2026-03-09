@@ -1209,8 +1209,6 @@ if __name__ == "__main__":
         "📊 Daily report at 23:59 Algeria time\n"
         "📡 Status report every 30 minutes\n"
         "⚙️ Scanning every 1 minute..."
-last_sent = {}
-COOLDOWN_SECONDS = 1800
     kz_alert_sent = False
     while True:
         try:
