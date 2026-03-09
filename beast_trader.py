@@ -7,11 +7,11 @@ from datetime import datetime, timezone
 # ========== CONFIG ==========
 GROQ_KEY = os.environ.get("GROQ_KEY", "")
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
-GROQ_MODEL = "llama-3.1-8b-instant"
+GROQ_MODEL = "llama-3.3-70b-versatile"
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
-MIN_SIGNAL_SCORE = 6
-MIN_WIN_PROB = 60
+MIN_SIGNAL_SCORE = 7
+MIN_WIN_PROB = 65
 MIN_ADX = 20
 HEARTBEAT_INTERVAL = 30  # every 30 cycles = 30 min
 ALGERIA_UTC_OFFSET = 1   # Algeria = UTC+1
@@ -21,8 +21,6 @@ active_trades = []  # open trades being monitored
 daily_stats = {"date": "", "wins": 0, "losses": 0, "tp1_hits": 0, "tp2_hits": 0, "trades": []}
 daily_report_sent = False
 cycle_count = 0
-last_sent = {}  # {pair: timestamp} cooldown tracker
-COOLDOWN_SECONDS = 1800  # 30 min
 
 # ========== TELEGRAM ==========
 def send_telegram(message):
@@ -382,6 +380,94 @@ def check_tf_alignment(s1, s2, s3, s4):
         return "BEARISH", bearish
     return "MIXED", max(bullish, bearish)
 
+def calc_support_resistance(candles_m15, candles_h1, candles_h4, price):
+    """
+    Calculate S/R levels on M15, H1, H4.
+    Returns dict with nearest support and resistance on each TF,
+    and whether price is near any key level.
+    """
+    result = {
+        "m15": {"support": None, "resistance": None},
+        "h1":  {"support": None, "resistance": None},
+        "h4":  {"support": None, "resistance": None},
+        "near_support": False,
+        "near_resistance": False,
+        "nearest_level": None,
+        "level_type": None,
+        "proximity_pct": None
+    }
+
+    def find_levels(candles, lookback=50):
+        """Find swing highs and lows as S/R levels"""
+        if not candles or len(candles) < 10:
+            return [], []
+        candles = candles[-lookback:]
+        supports = []
+        resistances = []
+        for i in range(2, len(candles) - 2):
+            # Swing low = support
+            if (candles[i]["low"] < candles[i-1]["low"] and
+                candles[i]["low"] < candles[i-2]["low"] and
+                candles[i]["low"] < candles[i+1]["low"] and
+                candles[i]["low"] < candles[i+2]["low"]):
+                supports.append(candles[i]["low"])
+            # Swing high = resistance
+            if (candles[i]["high"] > candles[i-1]["high"] and
+                candles[i]["high"] > candles[i-2]["high"] and
+                candles[i]["high"] > candles[i+1]["high"] and
+                candles[i]["high"] > candles[i+2]["high"]):
+                resistances.append(candles[i]["high"])
+        return supports, resistances
+
+    # Also add round numbers as S/R
+    def round_numbers(price):
+        """Generate round number levels near price"""
+        magnitude = 10 ** (len(str(int(price))) - 2)
+        base = round(price / magnitude) * magnitude
+        return [base - magnitude, base, base + magnitude]
+
+    for tf_name, candles in [("m15", candles_m15), ("h1", candles_h1), ("h4", candles_h4)]:
+        supports, resistances = find_levels(candles)
+
+        # Nearest support below price
+        sup_below = [s for s in supports if s < price]
+        res_above = [r for r in resistances if r > price]
+
+        nearest_sup = max(sup_below) if sup_below else None
+        nearest_res = min(res_above) if res_above else None
+
+        result[tf_name]["support"] = round(nearest_sup, 5) if nearest_sup else None
+        result[tf_name]["resistance"] = round(nearest_res, 5) if nearest_res else None
+
+    # Check if price is near any level (within 0.15%)
+    all_levels = []
+    for tf in ["m15", "h1", "h4"]:
+        if result[tf]["support"]:
+            all_levels.append(("support", result[tf]["support"], tf))
+        if result[tf]["resistance"]:
+            all_levels.append(("resistance", result[tf]["resistance"], tf))
+
+    # Add round numbers
+    for rn in round_numbers(price):
+        all_levels.append(("round", rn, "round"))
+
+    if all_levels:
+        nearest = min(all_levels, key=lambda x: abs(x[1] - price))
+        dist_pct = abs(nearest[1] - price) / price * 100
+        result["nearest_level"] = nearest[1]
+        result["level_type"] = nearest[0]
+        result["proximity_pct"] = round(dist_pct, 4)
+        if dist_pct < 0.15:
+            if nearest[0] == "support":
+                result["near_support"] = True
+            elif nearest[0] == "resistance":
+                result["near_resistance"] = True
+            elif nearest[0] == "round":
+                result["near_support"] = True  # treat round numbers as both
+                result["near_resistance"] = True
+
+    return result
+
 # ========== GROQ AI ==========
 def ask_groq(prompt):
     headers = {"Authorization": "Bearer " + GROQ_KEY, "Content-Type": "application/json"}
@@ -395,11 +481,11 @@ def ask_groq(prompt):
     return r.json()["choices"][0]["message"]["content"]
 
 # ========== SMART PRE-FILTER (saves 90% tokens) ==========
-def should_call_ai(pair, price, m1, m15, h4, adx_val, vol_ratio):
+def should_call_ai(pair, price, m1, m15, h4, adx_val, vol_ratio, h1=None):
     """
     Check technical conditions BEFORE calling Groq AI.
-    Only call AI if at least 3 conditions are met.
-    Returns (should_call, reasons)
+    Only call AI if at least 3 conditions are met AND ICT confirmed.
+    Returns (should_call, score, reasons)
     """
     reasons = []
     score = 0
@@ -407,7 +493,7 @@ def should_call_ai(pair, price, m1, m15, h4, adx_val, vol_ratio):
     # 1. Kill Zone active
     if is_kill_zone():
         reasons.append("Kill Zone active")
-        score += 2  # kill zone = double weight
+        score += 2
 
     # 2. RSI oversold/overbought
     if m1:
@@ -446,7 +532,8 @@ def should_call_ai(pair, price, m1, m15, h4, adx_val, vol_ratio):
             reasons.append(f"TF aligned ({struct_15})")
             score += 2
 
-    # 6. Price near FVG or OB
+    # 6. Price near FVG or OB (ICT)
+    ict_confirmed = False
     if m1:
         fvgs = find_fvg(m1)
         obs  = find_obs(m1)
@@ -456,12 +543,14 @@ def should_call_ai(pair, price, m1, m15, h4, adx_val, vol_ratio):
             if dist_pct < 0.1:
                 reasons.append(f"Price at FVG ({dist_pct:.3f}%)")
                 score += 2
+                ict_confirmed = True
         if obs:
             nearest_ob = min(obs, key=lambda x: abs(x["mid"] - price))
             dist_pct = abs(nearest_ob["mid"] - price) / price * 100
             if dist_pct < 0.1:
                 reasons.append(f"Price at OB ({dist_pct:.3f}%)")
                 score += 2
+                ict_confirmed = True
 
     # 7. Premium/Discount zone
     if h4:
@@ -470,10 +559,26 @@ def should_call_ai(pair, price, m1, m15, h4, adx_val, vol_ratio):
             reasons.append(f"PD Zone: {pd.split(' ')[0]}")
             score += 1
 
-    # Minimum score = 3 to call AI
+    # 8. Support & Resistance levels
+    sr = calc_support_resistance(m15, h1 or [], h4, price)
+    if sr["near_support"]:
+        reasons.append(f"Near Support ({sr['proximity_pct']}% away)")
+        score += 2
+    elif sr["near_resistance"]:
+        reasons.append(f"Near Resistance ({sr['proximity_pct']}% away)")
+        score += 2
+    elif sr["proximity_pct"] and sr["proximity_pct"] < 0.3:
+        reasons.append(f"Near S/R level ({sr['proximity_pct']}%)")
+        score += 1
+
+    # ICT MANDATORY — must have FVG or OB
+    if not ict_confirmed:
+        should_call = False
+        reasons.append("❌ NO ICT — signal blocked")
+        return should_call, score, reasons
+
     should_call = score >= 3
     return should_call, score, reasons
-
 
 # ========== ANALYSIS ==========
 def analyze(pair, price, m1, m5, m15, h1, h4, extra=""):
@@ -505,16 +610,32 @@ def analyze(pair, price, m1, m5, m15, h1, h4, extra=""):
     near_obs = sorted(obs, key=lambda x: abs(x["mid"]-price))[:2]
     vol_label, _ = calc_volume_analysis(m1, 20) if m1 else ("N/A", 0)
 
-    # SL/TP suggestions
-    if atr_1m:
-        sl_buy  = round(price - atr_1m * 1.5, 5)
-        sl_sell = round(price + atr_1m * 1.5, 5)
-        tp1     = round(price + atr_1m * 2, 5) if "BUY" in str(pd_zone) else round(price - atr_1m * 2, 5)
-        tp2     = round(price + atr_1m * 4, 5) if "BUY" in str(pd_zone) else round(price - atr_1m * 4, 5)
+    # SL/TP suggestions — use H1 ATR for realistic levels (not M1)
+    atr_for_sl = atr_15m if atr_15m else atr_1m
+    if atr_for_sl:
+        # SL = 2x ATR (enough breathing room)
+        sl_buy  = round(price - atr_for_sl * 2.0, 5)
+        sl_sell = round(price + atr_for_sl * 2.0, 5)
+        # TP1 = 2x SL distance (RR 1:2)
+        # TP2 = 4x SL distance (RR 1:4)
+        sl_dist = atr_for_sl * 2.0
+        tp1_buy   = round(price + sl_dist * 2, 5)
+        tp1_sell  = round(price - sl_dist * 2, 5)
+        tp2_buy   = round(price + sl_dist * 4, 5)
+        tp2_sell  = round(price - sl_dist * 4, 5)
+        tp1 = tp1_buy if "DISCOUNT" in str(pd_zone) else tp1_sell
+        tp2 = tp2_buy if "DISCOUNT" in str(pd_zone) else tp2_sell
     else:
         sl_buy = sl_sell = tp1 = tp2 = "N/A"
 
-    prompt = f"""You are an elite ICT scalping trader. Analyze this live setup.
+    prompt = f"""You are an elite ICT trader. Analyze this setup using PURE ICT methodology.
+
+STRICT RULES:
+1. ONLY give BUY/SELL if price is AT or NEAR a valid FVG or Order Block
+2. SL must be BEYOND the FVG/OB (not inside it) — minimum 2x ATR distance
+3. TP1 minimum RR 1:2 | TP2 minimum RR 1:4
+4. If no clear ICT setup → DIRECTION: WAIT
+5. Give enough distance for late entry (5-10 minutes to enter)
 
 PAIR: {pair} | PRICE: {price}
 KILL ZONE: {kill_zone()}
@@ -531,13 +652,13 @@ MACD (5m): {macd_str}
 ADX: 1m={adx_1m} | 15m={adx_15m}
 
 VOLATILITY:
-ATR 1m={atr_1m} | ATR 15m={atr_15m}
-ATR SL (BUY)={sl_buy} | ATR SL (SELL)={sl_sell}
-ATR TP1={tp1} | ATR TP2={tp2}
+ATR 15m={atr_15m} | ATR 1m={atr_1m}
+Suggested SL BUY={sl_buy} | SL SELL={sl_sell}
+Suggested TP1={tp1} | TP2={tp2}
 
 VOLUME: {vol_label}
 
-ICT:
+ICT (MANDATORY):
 FVG (1m): {json.dumps(near_fvg)}
 OB (1m): {json.dumps(near_obs)}
 Last 5 candles 1m: {json.dumps(m1[-5:] if m1 else [])}
@@ -547,15 +668,15 @@ Last 5 candles 15m: {json.dumps(m15[-5:] if m15 else [])}
 Reply ONLY in this exact format:
 DIRECTION: [BUY/SELL/WAIT]
 ENTRY: [price]
-SL: [price]
-TP1: [price]
-TP2: [price]
-RR: [ratio]
+SL: [price — must be 2x ATR away minimum]
+TP1: [price — RR at least 1:2]
+TP2: [price — RR at least 1:4]
+RR: [ratio e.g. 1:3]
 SIGNAL: [1-10]
 TIMING: [Good/Neutral/Bad]
 WIN PROBABILITY: [x%]
-CONFLUENCE: [factors]
-REASON: [one sentence]"""
+CONFLUENCE: [ICT factors: FVG/OB/PD/Structure/KZ]
+REASON: [one sentence mentioning the ICT setup]"""
 
     return ask_groq(prompt)
 
@@ -1043,7 +1164,6 @@ def run():
         for name, price, res, score, prob, msg in filtered:
             send_telegram(msg)
             print(f"  SENT: {name} | Score:{score} | Prob:{prob}%")
-            last_sent[name] = time.time()
             # Parse entry/sl/tp from signal and add to tracker
             try:
                 direction = "WAIT"
