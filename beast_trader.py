@@ -21,9 +21,6 @@ active_trades = []  # open trades being monitored
 daily_stats = {"date": "", "wins": 0, "losses": 0, "tp1_hits": 0, "tp2_hits": 0, "trades": []}
 daily_report_sent = False
 cycle_count = 0
-last_sent = {}
-COOLDOWN_SECONDS = 1800
-kz_alert_sent = False
 
 # ========== TELEGRAM ==========
 def send_telegram(message):
@@ -535,24 +532,64 @@ def should_call_ai(pair, price, m1, m15, h4, adx_val, vol_ratio, h1=None):
             reasons.append(f"TF aligned ({struct_15})")
             score += 2
 
-    # 6. Price near FVG or OB (ICT)
+    # 6. ICT — FVG و OB على H4 و H1 (الصحيح في منهجية ICT)
     ict_confirmed = False
-    if m1:
-        fvgs = find_fvg(m1)
-        obs  = find_obs(m1)
-        if fvgs:
-            nearest_fvg = min(fvgs, key=lambda x: abs(x["mid"] - price))
-            dist_pct = abs(nearest_fvg["mid"] - price) / price * 100
-            if dist_pct < 0.1:
-                reasons.append(f"Price at FVG ({dist_pct:.3f}%)")
+
+    # H4 FVG/OB — الأهم (الاتجاه الكبير)
+    if h4:
+        fvgs_h4 = find_fvg(h4)
+        obs_h4  = find_obs(h4)
+        if fvgs_h4:
+            nearest = min(fvgs_h4, key=lambda x: abs(x["mid"] - price))
+            dist_pct = abs(nearest["mid"] - price) / price * 100
+            if dist_pct < 0.5:  # H4 FVG واسع أكثر
+                reasons.append(f"H4 FVG ({dist_pct:.3f}%)")
+                score += 3
+                ict_confirmed = True
+        if obs_h4:
+            nearest = min(obs_h4, key=lambda x: abs(x["mid"] - price))
+            dist_pct = abs(nearest["mid"] - price) / price * 100
+            if dist_pct < 0.5:
+                reasons.append(f"H4 OB ({dist_pct:.3f}%)")
+                score += 3
+                ict_confirmed = True
+
+    # H1 FVG/OB — تأكيد الدخول
+    if h1:
+        fvgs_h1 = find_fvg(h1)
+        obs_h1  = find_obs(h1)
+        if fvgs_h1:
+            nearest = min(fvgs_h1, key=lambda x: abs(x["mid"] - price))
+            dist_pct = abs(nearest["mid"] - price) / price * 100
+            if dist_pct < 0.3:
+                reasons.append(f"H1 FVG ({dist_pct:.3f}%)")
                 score += 2
                 ict_confirmed = True
-        if obs:
-            nearest_ob = min(obs, key=lambda x: abs(x["mid"] - price))
-            dist_pct = abs(nearest_ob["mid"] - price) / price * 100
-            if dist_pct < 0.1:
-                reasons.append(f"Price at OB ({dist_pct:.3f}%)")
+        if obs_h1:
+            nearest = min(obs_h1, key=lambda x: abs(x["mid"] - price))
+            dist_pct = abs(nearest["mid"] - price) / price * 100
+            if dist_pct < 0.3:
+                reasons.append(f"H1 OB ({dist_pct:.3f}%)")
                 score += 2
+                ict_confirmed = True
+
+    # M15 FVG/OB — نقطة الدخول
+    if m15:
+        fvgs_m15 = find_fvg(m15)
+        obs_m15  = find_obs(m15)
+        if fvgs_m15:
+            nearest = min(fvgs_m15, key=lambda x: abs(x["mid"] - price))
+            dist_pct = abs(nearest["mid"] - price) / price * 100
+            if dist_pct < 0.2:
+                reasons.append(f"M15 FVG ({dist_pct:.3f}%)")
+                score += 1
+                ict_confirmed = True
+        if obs_m15:
+            nearest = min(obs_m15, key=lambda x: abs(x["mid"] - price))
+            dist_pct = abs(nearest["mid"] - price) / price * 100
+            if dist_pct < 0.2:
+                reasons.append(f"M15 OB ({dist_pct:.3f}%)")
+                score += 1
                 ict_confirmed = True
 
     # 7. Premium/Discount zone
@@ -607,10 +644,19 @@ def analyze(pair, price, m1, m5, m15, h1, h4, extra=""):
     struct_h4  = get_structure(h4)  if h4  else "N/A"
     tf_align, align_count = check_tf_alignment(struct_m1, struct_m15, struct_h1, struct_h4)
     pd_zone = get_pd(price, h4) if h4 else "N/A"
-    fvg = find_fvg(m1) if m1 else []
-    obs = find_obs(m1) if m1 else []
-    near_fvg = sorted(fvg, key=lambda x: abs(x["mid"]-price))[:3]
-    near_obs = sorted(obs, key=lambda x: abs(x["mid"]-price))[:2]
+    fvg_h4 = find_fvg(h4) if h4 else []
+    obs_h4 = find_obs(h4) if h4 else []
+    fvg_h1 = find_fvg(h1) if h1 else []
+    obs_h1 = find_obs(h1) if h1 else []
+    fvg_m15 = find_fvg(m15) if m15 else []
+    obs_m15 = find_obs(m15) if m15 else []
+
+    near_fvg_h4 = sorted(fvg_h4, key=lambda x: abs(x["mid"]-price))[:2]
+    near_obs_h4 = sorted(obs_h4, key=lambda x: abs(x["mid"]-price))[:2]
+    near_fvg_h1 = sorted(fvg_h1, key=lambda x: abs(x["mid"]-price))[:2]
+    near_obs_h1 = sorted(obs_h1, key=lambda x: abs(x["mid"]-price))[:2]
+    near_fvg_m15 = sorted(fvg_m15, key=lambda x: abs(x["mid"]-price))[:2]
+    near_obs_m15 = sorted(obs_m15, key=lambda x: abs(x["mid"]-price))[:2]
     vol_label, _ = calc_volume_analysis(m1, 20) if m1 else ("N/A", 0)
 
     # SL/TP suggestions — use H1 ATR for realistic levels (not M1)
@@ -661,11 +707,13 @@ Suggested TP1={tp1} | TP2={tp2}
 
 VOLUME: {vol_label}
 
-ICT (MANDATORY):
-FVG (1m): {json.dumps(near_fvg)}
-OB (1m): {json.dumps(near_obs)}
-Last 5 candles 1m: {json.dumps(m1[-5:] if m1 else [])}
-Last 5 candles 15m: {json.dumps(m15[-5:] if m15 else [])}
+ICT (MANDATORY — Top Down):
+H4 FVG: {json.dumps(near_fvg_h4)}
+H4 OB:  {json.dumps(near_obs_h4)}
+H1 FVG: {json.dumps(near_fvg_h1)}
+H1 OB:  {json.dumps(near_obs_h1)}
+M15 FVG: {json.dumps(near_fvg_m15)}
+M15 OB:  {json.dumps(near_obs_m15)}
 {extra}
 
 Reply ONLY in this exact format:
@@ -981,7 +1029,6 @@ def send_status_report(all_results):
 
 # ========== MAIN ==========
 def run():
-    global kz_alert_sent
     now = datetime.now(timezone.utc)
     kz = kill_zone()
     print(f"\n{'='*60}")
@@ -989,11 +1036,8 @@ def run():
     print(f"  {kz} | Day: {now.strftime('%A')}")
     print(f"{'='*60}")
 
-    if is_kill_zone() and not kz_alert_sent:
+    if is_kill_zone():
         send_telegram(f"⚡ <b>KILL ZONE ACTIVE</b>\n{kz}\n🎯 High probability setups incoming!")
-        kz_alert_sent = True
-    elif not is_kill_zone():
-        kz_alert_sent = False
 
     all_results = []
 
@@ -1156,10 +1200,8 @@ def run():
     print(f"  FILTER: min score={MIN_SIGNAL_SCORE} | min prob={MIN_WIN_PROB}%")
     print(f"{'='*60}")
 
-    now_ts = time.time()
     filtered = [(n, p, r, s, pr, m) for n, p, r, s, pr, m in all_results
-                if s >= MIN_SIGNAL_SCORE and pr >= MIN_WIN_PROB
-                and now_ts - last_sent.get(n, 0) > COOLDOWN_SECONDS]
+                if s >= MIN_SIGNAL_SCORE and pr >= MIN_WIN_PROB]
 
     if filtered:
         kz_tag = "⚡ KILL ZONE SIGNAL\n" if is_kill_zone() else ""
@@ -1173,7 +1215,6 @@ def run():
         for name, price, res, score, prob, msg in filtered:
             send_telegram(msg)
             print(f"  SENT: {name} | Score:{score} | Prob:{prob}%")
-            last_sent[name] = time.time()
             # Parse entry/sl/tp from signal and add to tracker
             try:
                 direction = "WAIT"
@@ -1209,7 +1250,8 @@ if __name__ == "__main__":
         "📊 Daily report at 23:59 Algeria time\n"
         "📡 Status report every 30 minutes\n"
         "⚙️ Scanning every 1 minute..."
-    kz_alert_sent = False
+    )
+    cycle_count = 0
     while True:
         try:
             # Reset daily stats if new day
