@@ -10,7 +10,7 @@ GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 GROQ_MODEL = "llama-3.1-8b-instant"
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
-MIN_SIGNAL_SCORE = 7
+MIN_SIGNAL_SCORE = 12
 COOLDOWN_SECONDS = 1800
 COOLDOWN_FILE = os.path.expanduser('~/last_sent.json')
 

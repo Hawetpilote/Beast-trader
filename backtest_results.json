@@ -1,0 +1,5959 @@
+{
+  "summary": {
+    "total": 661,
+    "wins": 269,
+    "losses": 392,
+    "win_rate": 40.7
+  },
+  "trades": [
+    {
+      "pair": "BTC/USD",
+      "time": "2026-02-28 05:45",
+      "direction": "SELL",
+      "price": 65591.03,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-01 06:15",
+      "direction": "BUY",
+      "price": 67047.13,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-01 10:30",
+      "direction": "SELL",
+      "price": 66398.26,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-01 11:00",
+      "direction": "SELL",
+      "price": 66514.84,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-01 11:30",
+      "direction": "SELL",
+      "price": 66387.6,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-01 12:00",
+      "direction": "SELL",
+      "price": 66506.77,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-01 13:00",
+      "direction": "SELL",
+      "price": 66316.64,
+      "score": 10,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-01 14:15",
+      "direction": "SELL",
+      "price": 66917.8,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-01 15:15",
+      "direction": "BUY",
+      "price": 67077.22,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-01 18:00",
+      "direction": "SELL",
+      "price": 66395.96,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-01 18:45",
+      "direction": "SELL",
+      "price": 66316.83,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-01 21:45",
+      "direction": "SELL",
+      "price": 65666.2,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-01 22:15",
+      "direction": "SELL",
+      "price": 65878.45,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-01 23:00",
+      "direction": "SELL",
+      "price": 65808.55,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-01 23:30",
+      "direction": "SELL",
+      "price": 65751.14,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-02 00:15",
+      "direction": "SELL",
+      "price": 65936.44,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-02 02:00",
+      "direction": "SELL",
+      "price": 66094.29,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-02 02:30",
+      "direction": "BUY",
+      "price": 66322.47,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-02 05:45",
+      "direction": "BUY",
+      "price": 66730.78,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-02 06:30",
+      "direction": "BUY",
+      "price": 66269.9,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-02 07:00",
+      "direction": "SELL",
+      "price": 65698.37,
+      "score": 10,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-02 07:30",
+      "direction": "SELL",
+      "price": 65964.88,
+      "score": 11,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-02 08:00",
+      "direction": "SELL",
+      "price": 66058.05,
+      "score": 11,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-02 08:30",
+      "direction": "SELL",
+      "price": 65980.23,
+      "score": 11,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-02 09:15",
+      "direction": "BUY",
+      "price": 66395.85,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-02 10:45",
+      "direction": "BUY",
+      "price": 66316.4,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-02 12:00",
+      "direction": "SELL",
+      "price": 66338.92,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-02 12:45",
+      "direction": "SELL",
+      "price": 65963.43,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-02 13:15",
+      "direction": "SELL",
+      "price": 65815.35,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-02 15:30",
+      "direction": "BUY",
+      "price": 69516.47,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-02 16:00",
+      "direction": "BUY",
+      "price": 69665.12,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-02 16:45",
+      "direction": "BUY",
+      "price": 69428.62,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-02 18:30",
+      "direction": "BUY",
+      "price": 69125.47,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-02 19:45",
+      "direction": "BUY",
+      "price": 68966.53,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-02 20:15",
+      "direction": "BUY",
+      "price": 68951.73,
+      "score": 14,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-02 20:45",
+      "direction": "BUY",
+      "price": 69106.58,
+      "score": 10,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-02 21:15",
+      "direction": "BUY",
+      "price": 69414.6,
+      "score": 12,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-02 21:45",
+      "direction": "BUY",
+      "price": 69413.82,
+      "score": 11,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-02 22:15",
+      "direction": "BUY",
+      "price": 69364.45,
+      "score": 13,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-02 22:45",
+      "direction": "BUY",
+      "price": 69440.49,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-02 23:15",
+      "direction": "BUY",
+      "price": 69002.93,
+      "score": 14,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-03 00:00",
+      "direction": "BUY",
+      "price": 68809.99,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-03 00:30",
+      "direction": "BUY",
+      "price": 69108.17,
+      "score": 13,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-03 01:00",
+      "direction": "BUY",
+      "price": 69132.08,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-03 01:30",
+      "direction": "BUY",
+      "price": 69032.82,
+      "score": 13,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-03 12:00",
+      "direction": "SELL",
+      "price": 67741.08,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-03 12:30",
+      "direction": "SELL",
+      "price": 67360.15,
+      "score": 11,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-04 07:45",
+      "direction": "BUY",
+      "price": 69493.13,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-04 08:15",
+      "direction": "BUY",
+      "price": 69316.41,
+      "score": 10,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-04 11:00",
+      "direction": "BUY",
+      "price": 71427.72,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-04 11:45",
+      "direction": "BUY",
+      "price": 71111.4,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-04 13:45",
+      "direction": "BUY",
+      "price": 71477.17,
+      "score": 10,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-04 14:30",
+      "direction": "BUY",
+      "price": 71416.59,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-05 11:30",
+      "direction": "BUY",
+      "price": 72837.66,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-05 23:30",
+      "direction": "SELL",
+      "price": 70919.43,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-06 00:30",
+      "direction": "SELL",
+      "price": 70899.15,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-06 01:30",
+      "direction": "SELL",
+      "price": 71161.19,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-06 02:15",
+      "direction": "BUY",
+      "price": 71335.89,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-06 03:00",
+      "direction": "SELL",
+      "price": 71067.9,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-06 03:30",
+      "direction": "SELL",
+      "price": 71092.01,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-06 04:00",
+      "direction": "SELL",
+      "price": 70910.91,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-06 05:15",
+      "direction": "SELL",
+      "price": 70393.09,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-06 05:45",
+      "direction": "SELL",
+      "price": 70436.19,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-06 06:15",
+      "direction": "SELL",
+      "price": 70425.92,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-06 07:00",
+      "direction": "SELL",
+      "price": 70553.66,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-06 07:30",
+      "direction": "BUY",
+      "price": 71075.56,
+      "score": 10,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-06 08:00",
+      "direction": "SELL",
+      "price": 70941.69,
+      "score": 10,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-06 08:30",
+      "direction": "SELL",
+      "price": 70914.05,
+      "score": 10,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-06 09:15",
+      "direction": "SELL",
+      "price": 70411.58,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-06 09:45",
+      "direction": "SELL",
+      "price": 70565.56,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-06 10:30",
+      "direction": "SELL",
+      "price": 70565.63,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-06 11:00",
+      "direction": "SELL",
+      "price": 70552.31,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-06 11:30",
+      "direction": "SELL",
+      "price": 70383.34,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-06 12:00",
+      "direction": "SELL",
+      "price": 69927.54,
+      "score": 10,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-06 12:30",
+      "direction": "SELL",
+      "price": 69754.35,
+      "score": 10,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-06 13:00",
+      "direction": "SELL",
+      "price": 70003.03,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-06 13:30",
+      "direction": "SELL",
+      "price": 70094.14,
+      "score": 11,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-06 22:30",
+      "direction": "SELL",
+      "price": 68372.19,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-06 23:00",
+      "direction": "SELL",
+      "price": 68334.55,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-06 23:45",
+      "direction": "SELL",
+      "price": 68114.02,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 00:15",
+      "direction": "SELL",
+      "price": 68210.27,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 00:45",
+      "direction": "SELL",
+      "price": 68290.45,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 01:15",
+      "direction": "SELL",
+      "price": 68225.06,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 01:45",
+      "direction": "SELL",
+      "price": 68262.01,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 02:15",
+      "direction": "SELL",
+      "price": 68107.02,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 02:45",
+      "direction": "BUY",
+      "price": 68350.04,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 03:15",
+      "direction": "SELL",
+      "price": 68233.79,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 06:45",
+      "direction": "SELL",
+      "price": 67690.86,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 07:15",
+      "direction": "SELL",
+      "price": 67727.6,
+      "score": 11,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 08:30",
+      "direction": "SELL",
+      "price": 67900.01,
+      "score": 10,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 10:00",
+      "direction": "SELL",
+      "price": 68093.04,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 10:45",
+      "direction": "SELL",
+      "price": 67880.31,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 11:15",
+      "direction": "BUY",
+      "price": 68145.55,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 11:45",
+      "direction": "SELL",
+      "price": 68010.01,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 13:30",
+      "direction": "SELL",
+      "price": 67879.66,
+      "score": 11,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 14:00",
+      "direction": "SELL",
+      "price": 67748.01,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 15:00",
+      "direction": "SELL",
+      "price": 67920.17,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 15:30",
+      "direction": "SELL",
+      "price": 67824.68,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 16:00",
+      "direction": "SELL",
+      "price": 67879.57,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 16:30",
+      "direction": "SELL",
+      "price": 67788.22,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 17:00",
+      "direction": "SELL",
+      "price": 67838.59,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 17:30",
+      "direction": "SELL",
+      "price": 67882.83,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 18:00",
+      "direction": "SELL",
+      "price": 67624.7,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 18:30",
+      "direction": "SELL",
+      "price": 67663.0,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 19:00",
+      "direction": "SELL",
+      "price": 67500.01,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 20:00",
+      "direction": "SELL",
+      "price": 67242.67,
+      "score": 10,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 20:30",
+      "direction": "SELL",
+      "price": 67395.55,
+      "score": 13,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 21:00",
+      "direction": "SELL",
+      "price": 67402.02,
+      "score": 12,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 21:30",
+      "direction": "SELL",
+      "price": 67369.99,
+      "score": 14,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 22:00",
+      "direction": "SELL",
+      "price": 67332.35,
+      "score": 13,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 22:30",
+      "direction": "SELL",
+      "price": 67241.0,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 23:00",
+      "direction": "SELL",
+      "price": 67329.39,
+      "score": 13,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-07 23:30",
+      "direction": "SELL",
+      "price": 67339.36,
+      "score": 14,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 00:00",
+      "direction": "SELL",
+      "price": 67395.99,
+      "score": 13,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 00:30",
+      "direction": "SELL",
+      "price": 67326.01,
+      "score": 13,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 01:00",
+      "direction": "SELL",
+      "price": 67277.16,
+      "score": 14,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 01:30",
+      "direction": "SELL",
+      "price": 67310.81,
+      "score": 14,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 02:00",
+      "direction": "SELL",
+      "price": 67317.99,
+      "score": 13,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 02:30",
+      "direction": "SELL",
+      "price": 67404.29,
+      "score": 13,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 03:00",
+      "direction": "SELL",
+      "price": 66976.7,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 03:30",
+      "direction": "SELL",
+      "price": 66994.82,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 04:00",
+      "direction": "SELL",
+      "price": 67029.3,
+      "score": 14,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 04:30",
+      "direction": "SELL",
+      "price": 66960.41,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 05:00",
+      "direction": "SELL",
+      "price": 66978.72,
+      "score": 15,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 05:30",
+      "direction": "SELL",
+      "price": 67192.25,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 06:00",
+      "direction": "SELL",
+      "price": 67099.27,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 06:30",
+      "direction": "SELL",
+      "price": 67120.0,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 07:00",
+      "direction": "BUY",
+      "price": 67384.2,
+      "score": 13,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 07:30",
+      "direction": "BUY",
+      "price": 67313.44,
+      "score": 14,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 08:00",
+      "direction": "BUY",
+      "price": 67239.55,
+      "score": 14,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 08:30",
+      "direction": "BUY",
+      "price": 67500.11,
+      "score": 13,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 09:00",
+      "direction": "BUY",
+      "price": 67762.83,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 09:30",
+      "direction": "BUY",
+      "price": 67752.19,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 10:00",
+      "direction": "BUY",
+      "price": 67879.29,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 10:45",
+      "direction": "BUY",
+      "price": 67904.14,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 11:15",
+      "direction": "BUY",
+      "price": 67679.48,
+      "score": 13,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 11:45",
+      "direction": "BUY",
+      "price": 67515.0,
+      "score": 13,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 12:15",
+      "direction": "BUY",
+      "price": 67431.46,
+      "score": 14,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 12:45",
+      "direction": "SELL",
+      "price": 67324.72,
+      "score": 13,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 13:15",
+      "direction": "SELL",
+      "price": 67163.88,
+      "score": 11,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 13:45",
+      "direction": "SELL",
+      "price": 67234.86,
+      "score": 11,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 14:15",
+      "direction": "SELL",
+      "price": 67265.54,
+      "score": 14,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 14:45",
+      "direction": "BUY",
+      "price": 67339.76,
+      "score": 13,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 15:15",
+      "direction": "SELL",
+      "price": 67175.49,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 15:45",
+      "direction": "SELL",
+      "price": 67218.23,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 16:15",
+      "direction": "SELL",
+      "price": 67113.9,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 16:45",
+      "direction": "SELL",
+      "price": 66872.15,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 17:15",
+      "direction": "SELL",
+      "price": 67070.24,
+      "score": 13,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 17:45",
+      "direction": "SELL",
+      "price": 67065.0,
+      "score": 13,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 18:15",
+      "direction": "SELL",
+      "price": 66930.67,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 18:45",
+      "direction": "SELL",
+      "price": 66804.0,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 19:15",
+      "direction": "SELL",
+      "price": 67199.54,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 19:45",
+      "direction": "BUY",
+      "price": 67337.42,
+      "score": 13,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 20:15",
+      "direction": "SELL",
+      "price": 67031.79,
+      "score": 13,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 20:45",
+      "direction": "SELL",
+      "price": 67238.8,
+      "score": 12,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 21:15",
+      "direction": "SELL",
+      "price": 66936.05,
+      "score": 12,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 21:45",
+      "direction": "SELL",
+      "price": 67020.01,
+      "score": 11,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-08 23:15",
+      "direction": "SELL",
+      "price": 66470.01,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 00:30",
+      "direction": "SELL",
+      "price": 66448.0,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 01:15",
+      "direction": "SELL",
+      "price": 66480.85,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 02:30",
+      "direction": "SELL",
+      "price": 66573.75,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 03:15",
+      "direction": "BUY",
+      "price": 67223.52,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 03:45",
+      "direction": "BUY",
+      "price": 67205.05,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 04:15",
+      "direction": "BUY",
+      "price": 67575.86,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 04:45",
+      "direction": "BUY",
+      "price": 67130.14,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 05:15",
+      "direction": "BUY",
+      "price": 67389.83,
+      "score": 13,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 05:45",
+      "direction": "BUY",
+      "price": 67911.16,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 06:15",
+      "direction": "BUY",
+      "price": 67508.24,
+      "score": 14,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 06:45",
+      "direction": "BUY",
+      "price": 67267.18,
+      "score": 13,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 07:30",
+      "direction": "BUY",
+      "price": 67427.67,
+      "score": 13,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 08:00",
+      "direction": "BUY",
+      "price": 67573.07,
+      "score": 12,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 08:30",
+      "direction": "BUY",
+      "price": 67792.84,
+      "score": 10,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 09:00",
+      "direction": "BUY",
+      "price": 67833.03,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 09:45",
+      "direction": "BUY",
+      "price": 67981.02,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 10:15",
+      "direction": "BUY",
+      "price": 67800.0,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 10:45",
+      "direction": "BUY",
+      "price": 67608.13,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 11:15",
+      "direction": "BUY",
+      "price": 67478.88,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 11:45",
+      "direction": "BUY",
+      "price": 67764.98,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 12:30",
+      "direction": "BUY",
+      "price": 68130.35,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 13:30",
+      "direction": "BUY",
+      "price": 69238.3,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 14:00",
+      "direction": "BUY",
+      "price": 68839.99,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 14:45",
+      "direction": "BUY",
+      "price": 69151.5,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 15:15",
+      "direction": "BUY",
+      "price": 69078.23,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 16:30",
+      "direction": "BUY",
+      "price": 69074.05,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BTC/USD",
+      "time": "2026-03-09 17:00",
+      "direction": "BUY",
+      "price": 68991.57,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-01 05:15",
+      "direction": "BUY",
+      "price": 2020.01,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-01 14:15",
+      "direction": "BUY",
+      "price": 2007.5,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-01 15:00",
+      "direction": "BUY",
+      "price": 2008.65,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-01 15:30",
+      "direction": "BUY",
+      "price": 2013.68,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-01 22:00",
+      "direction": "SELL",
+      "price": 1946.08,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-02 00:15",
+      "direction": "SELL",
+      "price": 1946.53,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-02 02:00",
+      "direction": "SELL",
+      "price": 1945.18,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-02 09:15",
+      "direction": "BUY",
+      "price": 1958.12,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-02 12:00",
+      "direction": "SELL",
+      "price": 1946.34,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-02 15:00",
+      "direction": "BUY",
+      "price": 2028.5,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-02 15:45",
+      "direction": "BUY",
+      "price": 2047.33,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-02 19:15",
+      "direction": "BUY",
+      "price": 2033.36,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-02 19:45",
+      "direction": "BUY",
+      "price": 2043.57,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-02 20:15",
+      "direction": "BUY",
+      "price": 2037.3,
+      "score": 11,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-02 21:00",
+      "direction": "BUY",
+      "price": 2038.04,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-02 21:30",
+      "direction": "BUY",
+      "price": 2045.72,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-02 22:00",
+      "direction": "BUY",
+      "price": 2044.63,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-02 23:00",
+      "direction": "BUY",
+      "price": 2045.35,
+      "score": 14,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-02 23:45",
+      "direction": "BUY",
+      "price": 2027.35,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-03 00:15",
+      "direction": "BUY",
+      "price": 2027.54,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-03 00:45",
+      "direction": "BUY",
+      "price": 2035.46,
+      "score": 13,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-03 01:15",
+      "direction": "BUY",
+      "price": 2029.22,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-03 10:45",
+      "direction": "SELL",
+      "price": 1958.05,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-03 11:15",
+      "direction": "SELL",
+      "price": 1957.61,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-03 13:30",
+      "direction": "SELL",
+      "price": 1951.78,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-04 04:45",
+      "direction": "SELL",
+      "price": 1960.25,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-04 09:30",
+      "direction": "BUY",
+      "price": 2084.02,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-04 10:00",
+      "direction": "BUY",
+      "price": 2084.83,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-04 12:15",
+      "direction": "BUY",
+      "price": 2040.99,
+      "score": 11,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-04 15:00",
+      "direction": "BUY",
+      "price": 2089.44,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-05 08:45",
+      "direction": "SELL",
+      "price": 2117.64,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-05 14:45",
+      "direction": "SELL",
+      "price": 2119.17,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-05 21:15",
+      "direction": "SELL",
+      "price": 2093.08,
+      "score": 10,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-05 23:15",
+      "direction": "SELL",
+      "price": 2082.82,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-06 00:30",
+      "direction": "SELL",
+      "price": 2071.05,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-06 01:30",
+      "direction": "BUY",
+      "price": 2085.77,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-06 02:00",
+      "direction": "BUY",
+      "price": 2091.89,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-06 02:30",
+      "direction": "BUY",
+      "price": 2088.73,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-06 03:00",
+      "direction": "SELL",
+      "price": 2078.49,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-06 03:30",
+      "direction": "BUY",
+      "price": 2083.68,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-06 04:00",
+      "direction": "SELL",
+      "price": 2077.9,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-06 06:30",
+      "direction": "SELL",
+      "price": 2075.55,
+      "score": 13,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-06 07:00",
+      "direction": "SELL",
+      "price": 2071.89,
+      "score": 10,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-06 07:30",
+      "direction": "BUY",
+      "price": 2084.39,
+      "score": 13,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-06 08:00",
+      "direction": "BUY",
+      "price": 2080.0,
+      "score": 13,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-06 08:30",
+      "direction": "BUY",
+      "price": 2080.38,
+      "score": 12,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-06 13:45",
+      "direction": "SELL",
+      "price": 2019.88,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-06 17:30",
+      "direction": "SELL",
+      "price": 1959.71,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-06 20:15",
+      "direction": "SELL",
+      "price": 1973.51,
+      "score": 11,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-06 21:15",
+      "direction": "SELL",
+      "price": 1975.0,
+      "score": 12,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-06 23:30",
+      "direction": "SELL",
+      "price": 1982.23,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 00:00",
+      "direction": "SELL",
+      "price": 1980.15,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 00:30",
+      "direction": "SELL",
+      "price": 1980.32,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 01:00",
+      "direction": "SELL",
+      "price": 1980.12,
+      "score": 13,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 01:30",
+      "direction": "SELL",
+      "price": 1979.82,
+      "score": 13,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 02:00",
+      "direction": "SELL",
+      "price": 1979.38,
+      "score": 13,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 02:30",
+      "direction": "SELL",
+      "price": 1974.69,
+      "score": 14,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 03:15",
+      "direction": "BUY",
+      "price": 1983.8,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 03:45",
+      "direction": "BUY",
+      "price": 1980.21,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 04:15",
+      "direction": "SELL",
+      "price": 1974.06,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 04:45",
+      "direction": "SELL",
+      "price": 1975.35,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 05:15",
+      "direction": "SELL",
+      "price": 1975.81,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 05:45",
+      "direction": "SELL",
+      "price": 1979.01,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 06:15",
+      "direction": "SELL",
+      "price": 1974.66,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 06:45",
+      "direction": "SELL",
+      "price": 1971.76,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 07:15",
+      "direction": "SELL",
+      "price": 1975.64,
+      "score": 12,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 07:45",
+      "direction": "BUY",
+      "price": 1982.94,
+      "score": 12,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 08:30",
+      "direction": "BUY",
+      "price": 1982.0,
+      "score": 12,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 09:00",
+      "direction": "BUY",
+      "price": 1983.95,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 09:45",
+      "direction": "BUY",
+      "price": 1986.35,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 10:15",
+      "direction": "BUY",
+      "price": 1984.86,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 10:45",
+      "direction": "BUY",
+      "price": 1984.36,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 12:30",
+      "direction": "BUY",
+      "price": 1984.02,
+      "score": 13,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 13:00",
+      "direction": "BUY",
+      "price": 1982.14,
+      "score": 12,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 13:30",
+      "direction": "SELL",
+      "price": 1980.64,
+      "score": 11,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 14:00",
+      "direction": "SELL",
+      "price": 1974.48,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 14:30",
+      "direction": "BUY",
+      "price": 1985.22,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 15:00",
+      "direction": "BUY",
+      "price": 1985.37,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 15:30",
+      "direction": "SELL",
+      "price": 1978.41,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 16:00",
+      "direction": "SELL",
+      "price": 1979.13,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 16:30",
+      "direction": "SELL",
+      "price": 1977.28,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 17:00",
+      "direction": "SELL",
+      "price": 1980.04,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 17:30",
+      "direction": "SELL",
+      "price": 1981.18,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 18:00",
+      "direction": "SELL",
+      "price": 1971.47,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 18:30",
+      "direction": "SELL",
+      "price": 1972.73,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 19:00",
+      "direction": "SELL",
+      "price": 1969.43,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 19:30",
+      "direction": "SELL",
+      "price": 1961.83,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 20:00",
+      "direction": "SELL",
+      "price": 1962.97,
+      "score": 11,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 20:30",
+      "direction": "SELL",
+      "price": 1966.35,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 21:00",
+      "direction": "SELL",
+      "price": 1967.91,
+      "score": 14,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 21:30",
+      "direction": "SELL",
+      "price": 1966.86,
+      "score": 10,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 22:00",
+      "direction": "SELL",
+      "price": 1967.34,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 23:00",
+      "direction": "SELL",
+      "price": 1968.07,
+      "score": 14,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-07 23:30",
+      "direction": "SELL",
+      "price": 1971.09,
+      "score": 14,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 00:00",
+      "direction": "SELL",
+      "price": 1973.91,
+      "score": 14,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 00:30",
+      "direction": "SELL",
+      "price": 1969.88,
+      "score": 13,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 01:00",
+      "direction": "SELL",
+      "price": 1970.36,
+      "score": 13,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 01:30",
+      "direction": "SELL",
+      "price": 1969.5,
+      "score": 13,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 02:00",
+      "direction": "SELL",
+      "price": 1968.72,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 02:30",
+      "direction": "SELL",
+      "price": 1969.11,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 04:00",
+      "direction": "SELL",
+      "price": 1950.59,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 05:00",
+      "direction": "SELL",
+      "price": 1944.81,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 05:30",
+      "direction": "SELL",
+      "price": 1950.57,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 06:00",
+      "direction": "SELL",
+      "price": 1946.79,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 07:00",
+      "direction": "SELL",
+      "price": 1957.24,
+      "score": 13,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 07:30",
+      "direction": "SELL",
+      "price": 1954.3,
+      "score": 13,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 08:00",
+      "direction": "SELL",
+      "price": 1951.24,
+      "score": 13,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 08:30",
+      "direction": "SELL",
+      "price": 1958.24,
+      "score": 12,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 09:00",
+      "direction": "BUY",
+      "price": 1964.73,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 09:30",
+      "direction": "BUY",
+      "price": 1966.75,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 10:00",
+      "direction": "BUY",
+      "price": 1966.07,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 10:30",
+      "direction": "BUY",
+      "price": 1972.77,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 11:00",
+      "direction": "SELL",
+      "price": 1956.22,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 11:30",
+      "direction": "SELL",
+      "price": 1948.7,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 12:15",
+      "direction": "SELL",
+      "price": 1949.18,
+      "score": 13,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 12:45",
+      "direction": "SELL",
+      "price": 1946.29,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 13:45",
+      "direction": "SELL",
+      "price": 1944.29,
+      "score": 12,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 14:15",
+      "direction": "SELL",
+      "price": 1943.37,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 14:45",
+      "direction": "SELL",
+      "price": 1945.52,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 15:30",
+      "direction": "SELL",
+      "price": 1941.43,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 16:00",
+      "direction": "SELL",
+      "price": 1941.31,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 16:30",
+      "direction": "SELL",
+      "price": 1939.39,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 17:00",
+      "direction": "SELL",
+      "price": 1940.87,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 19:00",
+      "direction": "SELL",
+      "price": 1946.68,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 19:45",
+      "direction": "BUY",
+      "price": 1964.91,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 20:15",
+      "direction": "BUY",
+      "price": 1956.3,
+      "score": 12,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 20:45",
+      "direction": "BUY",
+      "price": 1958.86,
+      "score": 14,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 21:15",
+      "direction": "BUY",
+      "price": 1951.25,
+      "score": 13,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 21:45",
+      "direction": "BUY",
+      "price": 1953.95,
+      "score": 13,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 22:30",
+      "direction": "SELL",
+      "price": 1937.95,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-08 23:00",
+      "direction": "BUY",
+      "price": 1948.35,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-09 00:00",
+      "direction": "BUY",
+      "price": 1946.68,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-09 00:30",
+      "direction": "BUY",
+      "price": 1956.07,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-09 01:15",
+      "direction": "BUY",
+      "price": 1951.76,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-09 01:45",
+      "direction": "BUY",
+      "price": 1946.0,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-09 02:15",
+      "direction": "SELL",
+      "price": 1944.23,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-09 02:45",
+      "direction": "BUY",
+      "price": 1959.66,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-09 04:45",
+      "direction": "BUY",
+      "price": 1977.31,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-09 05:30",
+      "direction": "BUY",
+      "price": 2004.06,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-09 06:00",
+      "direction": "BUY",
+      "price": 2007.3,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-09 06:45",
+      "direction": "BUY",
+      "price": 1985.0,
+      "score": 13,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-09 07:30",
+      "direction": "BUY",
+      "price": 1982.16,
+      "score": 11,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-09 08:00",
+      "direction": "BUY",
+      "price": 1986.71,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-09 08:30",
+      "direction": "BUY",
+      "price": 1993.41,
+      "score": 14,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-09 09:00",
+      "direction": "BUY",
+      "price": 1996.04,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-09 10:15",
+      "direction": "BUY",
+      "price": 2001.53,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-09 10:45",
+      "direction": "BUY",
+      "price": 1995.41,
+      "score": 13,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-09 11:15",
+      "direction": "BUY",
+      "price": 1984.12,
+      "score": 13,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-09 11:45",
+      "direction": "BUY",
+      "price": 1992.2,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "ETH/USD",
+      "time": "2026-03-09 12:30",
+      "direction": "BUY",
+      "price": 2002.66,
+      "score": 10,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 05:00",
+      "direction": "SELL",
+      "price": 1.1805,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 05:30",
+      "direction": "SELL",
+      "price": 1.1807,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 06:00",
+      "direction": "SELL",
+      "price": 1.1805,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 06:30",
+      "direction": "SELL",
+      "price": 1.18,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 07:00",
+      "direction": "SELL",
+      "price": 1.1794,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 11:30",
+      "direction": "SELL",
+      "price": 1.1784,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 12:00",
+      "direction": "SELL",
+      "price": 1.1787,
+      "score": 11,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 12:30",
+      "direction": "SELL",
+      "price": 1.179,
+      "score": 10,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 13:00",
+      "direction": "SELL",
+      "price": 1.1787,
+      "score": 10,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 13:30",
+      "direction": "SELL",
+      "price": 1.1788,
+      "score": 10,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 14:00",
+      "direction": "SELL",
+      "price": 1.1787,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 15:15",
+      "direction": "SELL",
+      "price": 1.1787,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 16:15",
+      "direction": "SELL",
+      "price": 1.1782,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 16:45",
+      "direction": "SELL",
+      "price": 1.1781,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 17:15",
+      "direction": "SELL",
+      "price": 1.1779,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 17:45",
+      "direction": "SELL",
+      "price": 1.1785,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 18:15",
+      "direction": "SELL",
+      "price": 1.1783,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 18:45",
+      "direction": "SELL",
+      "price": 1.1787,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 19:15",
+      "direction": "SELL",
+      "price": 1.1785,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 19:45",
+      "direction": "BUY",
+      "price": 1.1788,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 20:15",
+      "direction": "BUY",
+      "price": 1.1788,
+      "score": 10,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 20:45",
+      "direction": "BUY",
+      "price": 1.179,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 21:15",
+      "direction": "BUY",
+      "price": 1.179,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 21:45",
+      "direction": "BUY",
+      "price": 1.1793,
+      "score": 10,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 22:15",
+      "direction": "BUY",
+      "price": 1.179,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 22:45",
+      "direction": "BUY",
+      "price": 1.1792,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 23:15",
+      "direction": "BUY",
+      "price": 1.1795,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-02-28 23:45",
+      "direction": "BUY",
+      "price": 1.1797,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 00:15",
+      "direction": "BUY",
+      "price": 1.1797,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 00:45",
+      "direction": "BUY",
+      "price": 1.1796,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 02:30",
+      "direction": "BUY",
+      "price": 1.1806,
+      "score": 15,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 03:30",
+      "direction": "BUY",
+      "price": 1.1806,
+      "score": 15,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 04:00",
+      "direction": "BUY",
+      "price": 1.1807,
+      "score": 15,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 04:30",
+      "direction": "BUY",
+      "price": 1.1806,
+      "score": 15,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 05:00",
+      "direction": "BUY",
+      "price": 1.1806,
+      "score": 15,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 05:30",
+      "direction": "BUY",
+      "price": 1.1806,
+      "score": 14,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 06:00",
+      "direction": "BUY",
+      "price": 1.1807,
+      "score": 14,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 06:30",
+      "direction": "BUY",
+      "price": 1.1806,
+      "score": 14,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 07:00",
+      "direction": "BUY",
+      "price": 1.1807,
+      "score": 13,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 07:30",
+      "direction": "BUY",
+      "price": 1.1803,
+      "score": 13,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 08:00",
+      "direction": "BUY",
+      "price": 1.1806,
+      "score": 13,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 08:30",
+      "direction": "BUY",
+      "price": 1.1807,
+      "score": 13,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 09:00",
+      "direction": "BUY",
+      "price": 1.181,
+      "score": 13,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 09:30",
+      "direction": "BUY",
+      "price": 1.181,
+      "score": 13,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 10:00",
+      "direction": "BUY",
+      "price": 1.1811,
+      "score": 13,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 10:30",
+      "direction": "BUY",
+      "price": 1.1807,
+      "score": 13,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 11:00",
+      "direction": "BUY",
+      "price": 1.1807,
+      "score": 13,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 11:30",
+      "direction": "SELL",
+      "price": 1.1804,
+      "score": 13,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 12:00",
+      "direction": "SELL",
+      "price": 1.1803,
+      "score": 12,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 12:30",
+      "direction": "SELL",
+      "price": 1.1804,
+      "score": 13,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 13:00",
+      "direction": "SELL",
+      "price": 1.1805,
+      "score": 13,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 13:30",
+      "direction": "SELL",
+      "price": 1.1806,
+      "score": 12,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 14:00",
+      "direction": "SELL",
+      "price": 1.1801,
+      "score": 13,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 14:30",
+      "direction": "SELL",
+      "price": 1.1805,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 15:00",
+      "direction": "SELL",
+      "price": 1.1804,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 15:30",
+      "direction": "SELL",
+      "price": 1.1803,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 16:00",
+      "direction": "SELL",
+      "price": 1.1804,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 16:30",
+      "direction": "SELL",
+      "price": 1.1805,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 17:00",
+      "direction": "SELL",
+      "price": 1.1804,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 17:30",
+      "direction": "BUY",
+      "price": 1.1806,
+      "score": 15,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 18:00",
+      "direction": "SELL",
+      "price": 1.1805,
+      "score": 13,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 18:30",
+      "direction": "SELL",
+      "price": 1.18,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 19:00",
+      "direction": "SELL",
+      "price": 1.18,
+      "score": 13,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 19:30",
+      "direction": "SELL",
+      "price": 1.1792,
+      "score": 14,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 20:00",
+      "direction": "SELL",
+      "price": 1.1793,
+      "score": 14,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 20:30",
+      "direction": "SELL",
+      "price": 1.1788,
+      "score": 15,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 21:00",
+      "direction": "SELL",
+      "price": 1.178,
+      "score": 15,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 21:30",
+      "direction": "SELL",
+      "price": 1.1779,
+      "score": 15,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 22:00",
+      "direction": "SELL",
+      "price": 1.1764,
+      "score": 15,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 22:30",
+      "direction": "SELL",
+      "price": 1.1773,
+      "score": 15,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 23:00",
+      "direction": "SELL",
+      "price": 1.1773,
+      "score": 14,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-01 23:30",
+      "direction": "SELL",
+      "price": 1.1761,
+      "score": 13,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-02 00:00",
+      "direction": "SELL",
+      "price": 1.1766,
+      "score": 15,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-02 00:30",
+      "direction": "SELL",
+      "price": 1.1768,
+      "score": 14,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-02 01:00",
+      "direction": "SELL",
+      "price": 1.1784,
+      "score": 13,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-02 01:30",
+      "direction": "SELL",
+      "price": 1.1787,
+      "score": 13,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-02 02:00",
+      "direction": "SELL",
+      "price": 1.1783,
+      "score": 13,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-02 02:30",
+      "direction": "SELL",
+      "price": 1.1784,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-02 03:00",
+      "direction": "BUY",
+      "price": 1.1788,
+      "score": 13,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-02 03:30",
+      "direction": "BUY",
+      "price": 1.179,
+      "score": 13,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-02 04:00",
+      "direction": "SELL",
+      "price": 1.1785,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-02 04:30",
+      "direction": "SELL",
+      "price": 1.1781,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-02 05:00",
+      "direction": "SELL",
+      "price": 1.1774,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-02 05:30",
+      "direction": "SELL",
+      "price": 1.1771,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-02 06:00",
+      "direction": "SELL",
+      "price": 1.1752,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-02 09:00",
+      "direction": "SELL",
+      "price": 1.174,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-02 09:30",
+      "direction": "SELL",
+      "price": 1.1741,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-02 10:00",
+      "direction": "SELL",
+      "price": 1.1737,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-02 10:30",
+      "direction": "SELL",
+      "price": 1.1745,
+      "score": 13,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-03 06:00",
+      "direction": "SELL",
+      "price": 1.1668,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-03 06:30",
+      "direction": "SELL",
+      "price": 1.167,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-03 07:15",
+      "direction": "SELL",
+      "price": 1.1659,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-03 11:45",
+      "direction": "SELL",
+      "price": 1.1599,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-03 15:30",
+      "direction": "SELL",
+      "price": 1.1575,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-05 03:30",
+      "direction": "SELL",
+      "price": 1.1612,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-05 04:00",
+      "direction": "SELL",
+      "price": 1.161,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-05 04:30",
+      "direction": "SELL",
+      "price": 1.1604,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-05 05:00",
+      "direction": "SELL",
+      "price": 1.1607,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-05 05:30",
+      "direction": "SELL",
+      "price": 1.1603,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-05 06:00",
+      "direction": "SELL",
+      "price": 1.1588,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-05 06:30",
+      "direction": "SELL",
+      "price": 1.1595,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-06 06:00",
+      "direction": "SELL",
+      "price": 1.1601,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-06 10:00",
+      "direction": "SELL",
+      "price": 1.1575,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-06 10:30",
+      "direction": "SELL",
+      "price": 1.1576,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-06 11:00",
+      "direction": "SELL",
+      "price": 1.1576,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-06 13:00",
+      "direction": "SELL",
+      "price": 1.156,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-08 09:00",
+      "direction": "SELL",
+      "price": 1.159,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-08 09:30",
+      "direction": "SELL",
+      "price": 1.1589,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-08 10:00",
+      "direction": "SELL",
+      "price": 1.1591,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-08 18:15",
+      "direction": "SELL",
+      "price": 1.1576,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-08 18:45",
+      "direction": "SELL",
+      "price": 1.1574,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-08 19:15",
+      "direction": "SELL",
+      "price": 1.1572,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-08 19:45",
+      "direction": "SELL",
+      "price": 1.1573,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-08 20:15",
+      "direction": "SELL",
+      "price": 1.157,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-08 20:45",
+      "direction": "SELL",
+      "price": 1.1566,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-08 21:15",
+      "direction": "SELL",
+      "price": 1.1548,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-08 21:45",
+      "direction": "SELL",
+      "price": 1.1541,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-09 01:30",
+      "direction": "SELL",
+      "price": 1.1512,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "EUR/USD",
+      "time": "2026-03-09 06:45",
+      "direction": "BUY",
+      "price": 1.1544,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-02-28 21:15",
+      "direction": "BUY",
+      "price": 614.82,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-01 06:30",
+      "direction": "BUY",
+      "price": 623.88,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-01 07:00",
+      "direction": "BUY",
+      "price": 625.68,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-01 08:00",
+      "direction": "BUY",
+      "price": 625.94,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-01 10:00",
+      "direction": "SELL",
+      "price": 621.95,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-01 10:30",
+      "direction": "SELL",
+      "price": 621.8,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-01 11:15",
+      "direction": "BUY",
+      "price": 623.94,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-01 11:45",
+      "direction": "SELL",
+      "price": 622.81,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-01 12:15",
+      "direction": "SELL",
+      "price": 622.49,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-01 14:00",
+      "direction": "BUY",
+      "price": 627.75,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-01 14:30",
+      "direction": "BUY",
+      "price": 627.08,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-01 15:00",
+      "direction": "BUY",
+      "price": 629.3,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-01 15:30",
+      "direction": "BUY",
+      "price": 629.25,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-01 16:00",
+      "direction": "BUY",
+      "price": 628.37,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-01 16:30",
+      "direction": "BUY",
+      "price": 627.9,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-01 18:00",
+      "direction": "SELL",
+      "price": 623.34,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-01 18:30",
+      "direction": "SELL",
+      "price": 623.37,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-02 01:15",
+      "direction": "BUY",
+      "price": 621.06,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-02 04:30",
+      "direction": "BUY",
+      "price": 623.39,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-02 05:45",
+      "direction": "BUY",
+      "price": 623.55,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-02 11:45",
+      "direction": "BUY",
+      "price": 622.13,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-02 12:15",
+      "direction": "BUY",
+      "price": 621.23,
+      "score": 10,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-02 13:30",
+      "direction": "BUY",
+      "price": 621.25,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-02 15:45",
+      "direction": "BUY",
+      "price": 646.25,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-02 16:15",
+      "direction": "BUY",
+      "price": 648.58,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-02 16:45",
+      "direction": "BUY",
+      "price": 649.13,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-02 17:15",
+      "direction": "BUY",
+      "price": 646.54,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-02 18:15",
+      "direction": "BUY",
+      "price": 642.39,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-02 22:30",
+      "direction": "BUY",
+      "price": 640.57,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-03 00:00",
+      "direction": "BUY",
+      "price": 637.7,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-03 00:30",
+      "direction": "BUY",
+      "price": 640.9,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-03 01:00",
+      "direction": "BUY",
+      "price": 641.34,
+      "score": 13,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-03 05:00",
+      "direction": "SELL",
+      "price": 637.25,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-03 11:00",
+      "direction": "SELL",
+      "price": 625.96,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-03 11:30",
+      "direction": "SELL",
+      "price": 626.96,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-03 12:15",
+      "direction": "SELL",
+      "price": 628.94,
+      "score": 10,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-03 13:30",
+      "direction": "SELL",
+      "price": 624.76,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-04 08:30",
+      "direction": "BUY",
+      "price": 644.14,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-04 12:15",
+      "direction": "BUY",
+      "price": 646.6,
+      "score": 12,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-04 13:15",
+      "direction": "BUY",
+      "price": 652.6,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-04 15:00",
+      "direction": "BUY",
+      "price": 653.25,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-05 02:00",
+      "direction": "SELL",
+      "price": 656.49,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-05 08:30",
+      "direction": "SELL",
+      "price": 652.47,
+      "score": 10,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-05 09:00",
+      "direction": "SELL",
+      "price": 654.3,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-05 09:30",
+      "direction": "SELL",
+      "price": 655.45,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-05 10:00",
+      "direction": "BUY",
+      "price": 656.94,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-05 11:00",
+      "direction": "BUY",
+      "price": 662.37,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-05 11:30",
+      "direction": "BUY",
+      "price": 659.44,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-05 12:00",
+      "direction": "BUY",
+      "price": 657.56,
+      "score": 12,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-05 13:00",
+      "direction": "BUY",
+      "price": 657.89,
+      "score": 11,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-05 13:30",
+      "direction": "BUY",
+      "price": 656.34,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-05 14:00",
+      "direction": "BUY",
+      "price": 657.36,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-05 14:45",
+      "direction": "BUY",
+      "price": 656.68,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-05 21:30",
+      "direction": "SELL",
+      "price": 648.47,
+      "score": 10,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-05 22:30",
+      "direction": "SELL",
+      "price": 648.84,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-05 23:30",
+      "direction": "SELL",
+      "price": 648.17,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-06 00:30",
+      "direction": "SELL",
+      "price": 648.1,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-06 01:00",
+      "direction": "SELL",
+      "price": 647.82,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-06 05:15",
+      "direction": "SELL",
+      "price": 644.11,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-06 05:45",
+      "direction": "SELL",
+      "price": 644.89,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-06 06:15",
+      "direction": "SELL",
+      "price": 644.96,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-06 06:45",
+      "direction": "SELL",
+      "price": 645.15,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-06 07:15",
+      "direction": "SELL",
+      "price": 646.88,
+      "score": 13,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-06 07:45",
+      "direction": "SELL",
+      "price": 646.89,
+      "score": 13,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-06 08:15",
+      "direction": "SELL",
+      "price": 645.19,
+      "score": 12,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-06 08:45",
+      "direction": "SELL",
+      "price": 644.49,
+      "score": 11,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-06 09:45",
+      "direction": "SELL",
+      "price": 640.88,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-06 10:15",
+      "direction": "SELL",
+      "price": 641.27,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-06 11:15",
+      "direction": "SELL",
+      "price": 639.76,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-06 12:00",
+      "direction": "SELL",
+      "price": 635.74,
+      "score": 10,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-06 12:30",
+      "direction": "SELL",
+      "price": 636.35,
+      "score": 10,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-06 13:15",
+      "direction": "SELL",
+      "price": 638.98,
+      "score": 10,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-07 00:00",
+      "direction": "SELL",
+      "price": 627.87,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-07 01:45",
+      "direction": "SELL",
+      "price": 628.5,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-07 02:45",
+      "direction": "SELL",
+      "price": 627.66,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-07 03:15",
+      "direction": "SELL",
+      "price": 627.88,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-07 04:30",
+      "direction": "SELL",
+      "price": 627.51,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-07 07:30",
+      "direction": "SELL",
+      "price": 627.47,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-07 08:00",
+      "direction": "SELL",
+      "price": 628.1,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-07 08:30",
+      "direction": "BUY",
+      "price": 629.23,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-07 09:30",
+      "direction": "BUY",
+      "price": 629.87,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-07 10:00",
+      "direction": "BUY",
+      "price": 629.92,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-07 10:30",
+      "direction": "SELL",
+      "price": 627.34,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-07 12:15",
+      "direction": "SELL",
+      "price": 627.12,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-07 13:00",
+      "direction": "SELL",
+      "price": 627.12,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-08 04:00",
+      "direction": "SELL",
+      "price": 616.85,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-08 05:00",
+      "direction": "SELL",
+      "price": 617.42,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-08 05:30",
+      "direction": "SELL",
+      "price": 618.3,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-08 06:00",
+      "direction": "SELL",
+      "price": 618.25,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-08 07:15",
+      "direction": "BUY",
+      "price": 620.5,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-08 12:00",
+      "direction": "SELL",
+      "price": 617.68,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-08 14:45",
+      "direction": "SELL",
+      "price": 617.94,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-08 15:30",
+      "direction": "SELL",
+      "price": 616.07,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-08 16:00",
+      "direction": "SELL",
+      "price": 615.36,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-08 17:30",
+      "direction": "SELL",
+      "price": 613.15,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-08 18:15",
+      "direction": "SELL",
+      "price": 613.56,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-08 18:45",
+      "direction": "SELL",
+      "price": 613.56,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-08 19:15",
+      "direction": "SELL",
+      "price": 617.6,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-08 20:00",
+      "direction": "SELL",
+      "price": 617.28,
+      "score": 11,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-08 20:45",
+      "direction": "BUY",
+      "price": 617.64,
+      "score": 11,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-08 21:15",
+      "direction": "SELL",
+      "price": 617.06,
+      "score": 12,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-08 21:45",
+      "direction": "BUY",
+      "price": 617.4,
+      "score": 12,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-08 22:15",
+      "direction": "SELL",
+      "price": 612.59,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-08 22:45",
+      "direction": "SELL",
+      "price": 614.57,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-08 23:15",
+      "direction": "SELL",
+      "price": 615.09,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-09 00:00",
+      "direction": "SELL",
+      "price": 615.05,
+      "score": 14,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-09 00:30",
+      "direction": "BUY",
+      "price": 616.78,
+      "score": 13,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-09 01:00",
+      "direction": "BUY",
+      "price": 615.72,
+      "score": 13,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-09 01:30",
+      "direction": "BUY",
+      "price": 618.29,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-09 02:00",
+      "direction": "SELL",
+      "price": 615.16,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-09 02:45",
+      "direction": "BUY",
+      "price": 617.97,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-09 06:30",
+      "direction": "BUY",
+      "price": 623.63,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "BNB/USD",
+      "time": "2026-03-09 07:00",
+      "direction": "BUY",
+      "price": 620.69,
+      "score": 10,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-01 04:00",
+      "direction": "BUY",
+      "price": 87.54,
+      "score": 13,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-01 04:30",
+      "direction": "BUY",
+      "price": 87.7,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-01 05:00",
+      "direction": "BUY",
+      "price": 87.64,
+      "score": 13,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-01 05:30",
+      "direction": "BUY",
+      "price": 87.52,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-01 19:30",
+      "direction": "SELL",
+      "price": 83.12,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-01 21:15",
+      "direction": "SELL",
+      "price": 82.85,
+      "score": 10,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-01 21:45",
+      "direction": "SELL",
+      "price": 82.94,
+      "score": 12,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-01 22:15",
+      "direction": "SELL",
+      "price": 83.23,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-01 22:45",
+      "direction": "SELL",
+      "price": 82.73,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-02 01:00",
+      "direction": "BUY",
+      "price": 85.83,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-02 06:30",
+      "direction": "SELL",
+      "price": 83.33,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-02 07:00",
+      "direction": "SELL",
+      "price": 82.64,
+      "score": 11,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-02 07:30",
+      "direction": "SELL",
+      "price": 83.18,
+      "score": 13,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-02 08:00",
+      "direction": "SELL",
+      "price": 83.13,
+      "score": 13,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-02 08:30",
+      "direction": "SELL",
+      "price": 83.02,
+      "score": 14,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-02 13:15",
+      "direction": "SELL",
+      "price": 83.37,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-02 13:45",
+      "direction": "SELL",
+      "price": 83.08,
+      "score": 11,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-02 14:15",
+      "direction": "SELL",
+      "price": 83.23,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-02 15:15",
+      "direction": "BUY",
+      "price": 87.66,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-02 19:15",
+      "direction": "BUY",
+      "price": 87.32,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-02 21:15",
+      "direction": "BUY",
+      "price": 87.56,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-02 23:00",
+      "direction": "BUY",
+      "price": 87.34,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-03 00:30",
+      "direction": "BUY",
+      "price": 87.23,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-03 01:30",
+      "direction": "SELL",
+      "price": 86.71,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-03 02:30",
+      "direction": "SELL",
+      "price": 85.96,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-03 03:00",
+      "direction": "SELL",
+      "price": 86.25,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-03 03:45",
+      "direction": "SELL",
+      "price": 86.31,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-03 04:15",
+      "direction": "SELL",
+      "price": 86.15,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-03 04:45",
+      "direction": "SELL",
+      "price": 85.85,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-03 05:15",
+      "direction": "SELL",
+      "price": 86.37,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-03 05:45",
+      "direction": "SELL",
+      "price": 85.8,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-03 06:45",
+      "direction": "SELL",
+      "price": 85.85,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-03 07:15",
+      "direction": "SELL",
+      "price": 85.98,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-03 16:00",
+      "direction": "BUY",
+      "price": 86.31,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-03 22:00",
+      "direction": "BUY",
+      "price": 85.7,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-03 22:45",
+      "direction": "BUY",
+      "price": 86.29,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-04 00:00",
+      "direction": "BUY",
+      "price": 87.09,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-04 00:30",
+      "direction": "BUY",
+      "price": 86.37,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-04 01:15",
+      "direction": "BUY",
+      "price": 87.05,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-04 01:45",
+      "direction": "BUY",
+      "price": 87.26,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-04 02:15",
+      "direction": "BUY",
+      "price": 86.75,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-04 03:30",
+      "direction": "SELL",
+      "price": 85.48,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-04 04:00",
+      "direction": "SELL",
+      "price": 85.48,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-04 05:00",
+      "direction": "SELL",
+      "price": 85.41,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-04 05:30",
+      "direction": "SELL",
+      "price": 85.78,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-04 06:30",
+      "direction": "BUY",
+      "price": 85.9,
+      "score": 13,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-04 07:00",
+      "direction": "SELL",
+      "price": 85.7,
+      "score": 10,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-04 07:45",
+      "direction": "BUY",
+      "price": 87.43,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-04 08:15",
+      "direction": "BUY",
+      "price": 87.15,
+      "score": 10,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-05 11:30",
+      "direction": "BUY",
+      "price": 91.67,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-06 05:30",
+      "direction": "SELL",
+      "price": 87.57,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-06 06:00",
+      "direction": "SELL",
+      "price": 87.75,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-06 11:00",
+      "direction": "SELL",
+      "price": 87.89,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-06 12:30",
+      "direction": "SELL",
+      "price": 86.24,
+      "score": 10,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-06 13:00",
+      "direction": "SELL",
+      "price": 86.56,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-07 11:00",
+      "direction": "BUY",
+      "price": 84.85,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-07 11:30",
+      "direction": "BUY",
+      "price": 84.82,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-07 21:15",
+      "direction": "SELL",
+      "price": 83.17,
+      "score": 11,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-07 22:15",
+      "direction": "SELL",
+      "price": 83.04,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-07 23:15",
+      "direction": "SELL",
+      "price": 83.17,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-07 23:45",
+      "direction": "SELL",
+      "price": 83.22,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 00:15",
+      "direction": "SELL",
+      "price": 83.19,
+      "score": 11,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 00:45",
+      "direction": "SELL",
+      "price": 83.06,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 01:15",
+      "direction": "SELL",
+      "price": 82.99,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 01:45",
+      "direction": "SELL",
+      "price": 82.98,
+      "score": 10,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 02:15",
+      "direction": "SELL",
+      "price": 82.76,
+      "score": 9,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 05:00",
+      "direction": "SELL",
+      "price": 82.33,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 05:30",
+      "direction": "SELL",
+      "price": 82.6,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 06:15",
+      "direction": "SELL",
+      "price": 82.39,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 07:15",
+      "direction": "BUY",
+      "price": 82.86,
+      "score": 9,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 07:45",
+      "direction": "BUY",
+      "price": 82.95,
+      "score": 10,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 08:15",
+      "direction": "SELL",
+      "price": 82.72,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 08:45",
+      "direction": "BUY",
+      "price": 83.1,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 09:30",
+      "direction": "BUY",
+      "price": 83.21,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 12:15",
+      "direction": "SELL",
+      "price": 82.74,
+      "score": 10,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 13:30",
+      "direction": "SELL",
+      "price": 81.69,
+      "score": 9,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 14:00",
+      "direction": "SELL",
+      "price": 82.16,
+      "score": 12,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 14:30",
+      "direction": "SELL",
+      "price": 82.04,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 15:00",
+      "direction": "SELL",
+      "price": 82.29,
+      "score": 10,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 16:00",
+      "direction": "SELL",
+      "price": 81.94,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 16:30",
+      "direction": "SELL",
+      "price": 81.77,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 17:00",
+      "direction": "SELL",
+      "price": 81.83,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 17:30",
+      "direction": "SELL",
+      "price": 81.57,
+      "score": 9,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 18:15",
+      "direction": "SELL",
+      "price": 81.68,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 18:45",
+      "direction": "SELL",
+      "price": 81.6,
+      "score": 13,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 19:15",
+      "direction": "SELL",
+      "price": 82.28,
+      "score": 12,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 20:00",
+      "direction": "SELL",
+      "price": 82.13,
+      "score": 14,
+      "result": "LOSS",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 20:45",
+      "direction": "SELL",
+      "price": 82.33,
+      "score": 12,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 21:15",
+      "direction": "SELL",
+      "price": 82.0,
+      "score": 12,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 21:45",
+      "direction": "SELL",
+      "price": 82.25,
+      "score": 12,
+      "result": "WIN",
+      "kz": true
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 22:30",
+      "direction": "SELL",
+      "price": 81.83,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-08 23:30",
+      "direction": "SELL",
+      "price": 81.7,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-09 01:45",
+      "direction": "BUY",
+      "price": 82.1,
+      "score": 13,
+      "result": "WIN",
+      "kz": false
+    },
+    {
+      "pair": "SOL/USD",
+      "time": "2026-03-09 02:15",
+      "direction": "SELL",
+      "price": 81.93,
+      "score": 11,
+      "result": "LOSS",
+      "kz": false
+    }
+  ]
+}
