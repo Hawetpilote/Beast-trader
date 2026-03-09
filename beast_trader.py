@@ -986,8 +986,11 @@ def run():
     print(f"  {kz} | Day: {now.strftime('%A')}")
     print(f"{'='*60}")
 
-    if is_kill_zone():
+    if is_kill_zone() and not kz_alert_sent:
         send_telegram(f"⚡ <b>KILL ZONE ACTIVE</b>\n{kz}\n🎯 High probability setups incoming!")
+        kz_alert_sent = True
+    elif not is_kill_zone():
+        kz_alert_sent = False
 
     all_results = []
 
