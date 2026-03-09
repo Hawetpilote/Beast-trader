@@ -12,7 +12,7 @@ TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
 MIN_SIGNAL_SCORE = 7
 COOLDOWN_SECONDS = 1800
-COOLDOWN_FILE = "/tmp/last_sent.json"
+COOLDOWN_FILE = os.path.expanduser('~/last_sent.json')
 
 def load_last_sent():
     try:
