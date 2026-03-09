@@ -21,6 +21,7 @@ active_trades = []  # open trades being monitored
 daily_stats = {"date": "", "wins": 0, "losses": 0, "tp1_hits": 0, "tp2_hits": 0, "trades": []}
 daily_report_sent = False
 cycle_count = 0
+kz_alert_sent = False
 
 # ========== TELEGRAM ==========
 def send_telegram(message):
@@ -1201,6 +1202,7 @@ if __name__ == "__main__":
         "⚙️ Scanning every 1 minute..."
     )
     cycle_count = 0
+kz_alert_sent = False
     while True:
         try:
             # Reset daily stats if new day
