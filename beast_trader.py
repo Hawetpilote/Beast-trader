@@ -1200,8 +1200,10 @@ def run():
     print(f"  FILTER: min score={MIN_SIGNAL_SCORE} | min prob={MIN_WIN_PROB}%")
     print(f"{'='*60}")
 
+    now_ts = time.time()
     filtered = [(n, p, r, s, pr, m) for n, p, r, s, pr, m in all_results
-                if s >= MIN_SIGNAL_SCORE and pr >= MIN_WIN_PROB]
+                if s >= MIN_SIGNAL_SCORE and pr >= MIN_WIN_PROB
+                and now_ts - last_sent.get(n, 0) > COOLDOWN_SECONDS]
 
     if filtered:
         kz_tag = "⚡ KILL ZONE SIGNAL\n" if is_kill_zone() else ""
@@ -1215,6 +1217,8 @@ def run():
         for name, price, res, score, prob, msg in filtered:
             send_telegram(msg)
             print(f"  SENT: {name} | Score:{score} | Prob:{prob}%")
+            last_sent[name] = time.time()
+            save_last_sent(last_sent)
             # Parse entry/sl/tp from signal and add to tracker
             try:
                 direction = "WAIT"
