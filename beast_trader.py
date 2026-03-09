@@ -21,6 +21,8 @@ active_trades = []  # open trades being monitored
 daily_stats = {"date": "", "wins": 0, "losses": 0, "tp1_hits": 0, "tp2_hits": 0, "trades": []}
 daily_report_sent = False
 cycle_count = 0
+last_sent = {}
+COOLDOWN_SECONDS = 1800
 kz_alert_sent = False
 
 # ========== TELEGRAM ==========
@@ -979,6 +981,7 @@ def send_status_report(all_results):
 
 # ========== MAIN ==========
 def run():
+    global kz_alert_sent
     now = datetime.now(timezone.utc)
     kz = kill_zone()
     print(f"\n{'='*60}")
@@ -1153,8 +1156,10 @@ def run():
     print(f"  FILTER: min score={MIN_SIGNAL_SCORE} | min prob={MIN_WIN_PROB}%")
     print(f"{'='*60}")
 
+    now_ts = time.time()
     filtered = [(n, p, r, s, pr, m) for n, p, r, s, pr, m in all_results
-                if s >= MIN_SIGNAL_SCORE and pr >= MIN_WIN_PROB]
+                if s >= MIN_SIGNAL_SCORE and pr >= MIN_WIN_PROB
+                and now_ts - last_sent.get(n, 0) > COOLDOWN_SECONDS]
 
     if filtered:
         kz_tag = "⚡ KILL ZONE SIGNAL\n" if is_kill_zone() else ""
@@ -1168,6 +1173,7 @@ def run():
         for name, price, res, score, prob, msg in filtered:
             send_telegram(msg)
             print(f"  SENT: {name} | Score:{score} | Prob:{prob}%")
+            last_sent[name] = time.time()
             # Parse entry/sl/tp from signal and add to tracker
             try:
                 direction = "WAIT"
@@ -1203,9 +1209,9 @@ if __name__ == "__main__":
         "📊 Daily report at 23:59 Algeria time\n"
         "📡 Status report every 30 minutes\n"
         "⚙️ Scanning every 1 minute..."
-    )
-    cycle_count = 0
-kz_alert_sent = False
+last_sent = {}
+COOLDOWN_SECONDS = 1800
+    kz_alert_sent = False
     while True:
         try:
             # Reset daily stats if new day
