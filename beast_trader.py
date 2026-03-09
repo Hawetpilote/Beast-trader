@@ -7,11 +7,11 @@ from datetime import datetime, timezone
 # ========== CONFIG ==========
 GROQ_KEY = os.environ.get("GROQ_KEY", "")
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
-GROQ_MODEL = "llama-3.3-70b-versatile"
+GROQ_MODEL = "llama-3.1-8b-instant"
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
-MIN_SIGNAL_SCORE = 7
-MIN_WIN_PROB = 65
+MIN_SIGNAL_SCORE = 6
+MIN_WIN_PROB = 60
 MIN_ADX = 20
 HEARTBEAT_INTERVAL = 30  # every 30 cycles = 30 min
 ALGERIA_UTC_OFFSET = 1   # Algeria = UTC+1
@@ -391,6 +391,87 @@ def ask_groq(prompt):
     }
     r = requests.post(GROQ_URL, headers=headers, json=payload, timeout=30)
     return r.json()["choices"][0]["message"]["content"]
+
+# ========== SMART PRE-FILTER (saves 90% tokens) ==========
+def should_call_ai(pair, price, m1, m15, h4, adx_val, vol_ratio):
+    """
+    Check technical conditions BEFORE calling Groq AI.
+    Only call AI if at least 3 conditions are met.
+    Returns (should_call, reasons)
+    """
+    reasons = []
+    score = 0
+
+    # 1. Kill Zone active
+    if is_kill_zone():
+        reasons.append("Kill Zone active")
+        score += 2  # kill zone = double weight
+
+    # 2. RSI oversold/overbought
+    if m1:
+        rsi = calc_rsi(m1, 14)
+        if rsi <= 30:
+            reasons.append(f"RSI oversold ({rsi})")
+            score += 2
+        elif rsi >= 70:
+            reasons.append(f"RSI overbought ({rsi})")
+            score += 2
+        elif rsi <= 40 or rsi >= 60:
+            reasons.append(f"RSI extreme ({rsi})")
+            score += 1
+
+    # 3. ADX trending
+    if adx_val >= 25:
+        reasons.append(f"ADX trending ({adx_val})")
+        score += 2
+    elif adx_val >= 20:
+        reasons.append(f"ADX building ({adx_val})")
+        score += 1
+
+    # 4. Volume spike
+    if vol_ratio >= 1.5:
+        reasons.append(f"Volume spike ({vol_ratio}x)")
+        score += 2
+    elif vol_ratio >= 1.2:
+        reasons.append(f"Volume high ({vol_ratio}x)")
+        score += 1
+
+    # 5. Market structure alignment
+    if m15 and h4:
+        struct_15 = get_structure(m15)
+        struct_h4 = get_structure(h4)
+        if struct_15 == struct_h4 and struct_15 != "RANGING":
+            reasons.append(f"TF aligned ({struct_15})")
+            score += 2
+
+    # 6. Price near FVG or OB
+    if m1:
+        fvgs = find_fvg(m1)
+        obs  = find_obs(m1)
+        if fvgs:
+            nearest_fvg = min(fvgs, key=lambda x: abs(x["mid"] - price))
+            dist_pct = abs(nearest_fvg["mid"] - price) / price * 100
+            if dist_pct < 0.1:
+                reasons.append(f"Price at FVG ({dist_pct:.3f}%)")
+                score += 2
+        if obs:
+            nearest_ob = min(obs, key=lambda x: abs(x["mid"] - price))
+            dist_pct = abs(nearest_ob["mid"] - price) / price * 100
+            if dist_pct < 0.1:
+                reasons.append(f"Price at OB ({dist_pct:.3f}%)")
+                score += 2
+
+    # 7. Premium/Discount zone
+    if h4:
+        pd = get_pd(price, h4)
+        if "PREMIUM" in pd or "DISCOUNT" in pd:
+            reasons.append(f"PD Zone: {pd.split(' ')[0]}")
+            score += 1
+
+    # Minimum score = 3 to call AI
+    should_call = score >= 3
+    return should_call, score, reasons
+
 
 # ========== ANALYSIS ==========
 def analyze(pair, price, m1, m5, m15, h1, h4, extra=""):
@@ -798,6 +879,16 @@ def run():
             price = m1[-1]["close"] if m1 else 0
             vol_label, vol_ratio = calc_volume_analysis(m1, 20)
             adx_val = calc_adx(m1, 14)
+
+            # PRE-FILTER: check conditions before calling AI
+            should_call, pre_score, pre_reasons = should_call_ai(
+                name, price, m1, m15, h4, adx_val, vol_ratio)
+
+            if not should_call:
+                print(f"    Price: {price} | Pre-score: {pre_score}/3 — SKIP AI (saving tokens)")
+                continue
+
+            print(f"    Price: {price} | Pre-score: {pre_score} | Reasons: {', '.join(pre_reasons)}")
             funding = get_funding(symbol)
             pressure = get_pressure(symbol)
             extra = f"Funding: {funding}% | Orderbook: {pressure}"
@@ -805,7 +896,7 @@ def run():
             extra_info = f"Vol: {vol_label} | ADX: {adx_val} | {pressure}"
             msg, score, prob = format_message(name, price, res, extra_info)
             all_results.append((name, price, res, score, prob, msg))
-            print(f"    Price: {price} | Score: {score} | Prob: {prob}% | Vol: {vol_label}")
+            print(f"    Score: {score} | Prob: {prob}%")
         except Exception as e:
             print(f"    [ERROR] {name}: {e}")
 
@@ -848,6 +939,15 @@ def run():
 
             vol_label, vol_ratio = calc_volume_analysis(m1, 20) if m1 else ("N/A", 0)
             adx_val = calc_adx(m1, 14) if m1 else 0
+
+            # PRE-FILTER
+            should_call, pre_score, pre_reasons = should_call_ai(
+                name, price, m1, m15, h4, adx_val, vol_ratio)
+            if not should_call:
+                print(f"    Price: {price} | Pre-score: {pre_score}/3 — SKIP AI")
+                continue
+
+            print(f"    Pre-score: {pre_score} | {', '.join(pre_reasons)}")
             res = analyze(name, price, m1, m5, m15, h1, h4)
             extra_info = f"Vol: {vol_label} | ADX: {adx_val}" if vol_label != "N/A" else ""
             msg, score, prob = format_message(name, price, res, extra_info)
@@ -870,13 +970,21 @@ def run():
                     m15 = get_yahoo_candles("GC%3DF", "15m", "5d")
                 if not m1:
                     m1 = get_yahoo_candles("GC%3DF", "1m", "1d")
-                vol_label, _ = calc_volume_analysis(m1, 20) if m1 else ("N/A", 0)
+                vol_label, vol_ratio = calc_volume_analysis(m1, 20) if m1 else ("N/A", 0)
                 adx_val = calc_adx(m1, 14) if m1 else 0
-                res = analyze("XAU/USD", price, m1, [], m15, [], [])
-                extra_info = f"Vol: {vol_label} | ADX: {adx_val}"
-                msg, score, prob = format_message("XAU/USD", price, res, extra_info)
-                all_results.append(("XAU/USD", price, res, score, prob, msg))
-                print(f"    Score: {score} | Prob: {prob}%")
+
+                # PRE-FILTER
+                should_call, pre_score, pre_reasons = should_call_ai(
+                    "XAU/USD", price, m1, m15, [], adx_val, vol_ratio)
+                if not should_call:
+                    print(f"    Price: {price} | Pre-score: {pre_score}/3 — SKIP AI")
+                else:
+                    print(f"    Pre-score: {pre_score} | {', '.join(pre_reasons)}")
+                    res = analyze("XAU/USD", price, m1, [], m15, [], [])
+                    extra_info = f"Vol: {vol_label} | ADX: {adx_val}"
+                    msg, score, prob = format_message("XAU/USD", price, res, extra_info)
+                    all_results.append(("XAU/USD", price, res, score, prob, msg))
+                    print(f"    Score: {score} | Prob: {prob}%")
             else:
                 print(f"    [ERROR] Could not get gold price")
         except Exception as e:
@@ -896,6 +1004,16 @@ def run():
             if price:
                 m15 = get_yahoo_candles(ticker, "15m", "5d")
                 m1  = get_yahoo_candles(ticker, "1m",  "1d")
+                vol_label, vol_ratio = calc_volume_analysis(m1, 20) if m1 else ("N/A", 0)
+                adx_val = calc_adx(m1, 14) if m1 else 0
+
+                # PRE-FILTER
+                should_call, pre_score, pre_reasons = should_call_ai(
+                    name, price, m1, m15, [], adx_val, vol_ratio)
+                if not should_call:
+                    print(f"    Price: {price} | Pre-score: {pre_score}/3 — SKIP AI")
+                    continue
+
                 res = analyze(name, price, m1, [], m15, [], [])
                 msg, score, prob = format_message(name, price, res)
                 all_results.append((name, price, res, score, prob, msg))
