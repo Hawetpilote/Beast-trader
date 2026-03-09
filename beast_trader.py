@@ -707,4 +707,4 @@ if __name__ == "__main__":
         except Exception as e:
             print(f"[CRITICAL] {e}")
             send_telegram(f"⚠️ Error: {e}")
-        time.sleep(900)
+        time.sleep(60)
