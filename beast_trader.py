@@ -450,20 +450,24 @@ def main():
     print(f"  الحساب:  Demo Exness ${ACCOUNT_SIZE}")
     print(f"  الريسك:  {RISK_PERCENT}% لكل صفقة\n")
 
-    # إشعار بدء التشغيل
+    # إشعار بدء التشغيل — مع تأخير لتجنب التكرار عند restart
+    time.sleep(10)
+    start_time = datetime.now(tz=timezone.utc).strftime("%H:%M UTC")
     tg_send(
-        "🚀 <b>Beast Trader v6 شغّال!</b>\n"
-        "━━━━━━━━━━━━━━━━━━━━━\n"
-        "📊 الأزواج: ETH · BTC · GBP · QQQ · XAU\n"
-        "⏱️ فحص كل 15 دقيقة\n"
-        "🎯 Kill Zones فقط\n"
-        "💰 Demo Exness\n"
-        "━━━━━━━━━━━━━━━━━━━━━\n"
-        "⚡ <i>بناءً على 3 أشهر بحث + ICT منهجية الحربي</i>"
+        f"🚀 <b>Beast Trader v6 شغّال!</b>\n"
+        f"━━━━━━━━━━━━━━━━━━━━━\n"
+        f"📊 الأزواج: ETH · BTC · GBP · QQQ · XAU\n"
+        f"⏱️ فحص كل 15 دقيقة\n"
+        f"🎯 Kill Zones فقط\n"
+        f"💰 Demo Exness\n"
+        f"⏰ بدأ: {start_time}\n"
+        f"━━━━━━━━━━━━━━━━━━━━━\n"
+        f"⚡ <i>ICT منهجية الحربي — v6</i>"
     )
 
-    scan_count   = 0
-    signal_count = 0
+    scan_count        = 0
+    signal_count      = 0
+    daily_report_sent = set()  # نمنع التكرار
 
     while True:
         now_utc = datetime.now(tz=timezone.utc)
@@ -511,13 +515,16 @@ def main():
         if not signals_found:
             print(f"  ✓ لا إشارات — إجمالي الإشارات: {signal_count}")
 
-        # تقرير يومي الساعة 21:00 UTC
-        if now_utc.hour == 21 and now_utc.minute < 15:
+        # تقرير يومي الساعة 21:00 UTC — مرة واحدة فقط
+        today_str = now_utc.strftime('%Y-%m-%d')
+        if now_utc.hour == 21 and today_str not in daily_report_sent:
+            daily_report_sent.add(today_str)
             tg_send(
-                f"📊 <b>تقرير يومي</b>\n"
-                f"عمليات الفحص: {scan_count}\n"
-                f"إشارات اليوم: {signal_count}\n"
-                f"⏰ {now_utc.strftime('%Y-%m-%d')}"
+                f"📊 <b>تقرير يومي — {today_str}</b>\n"
+                f"━━━━━━━━━━━━━━━━━━━━━\n"
+                f"🔍 عمليات الفحص: {scan_count}\n"
+                f"📡 إشارات اليوم: {signal_count}\n"
+                f"⏰ 21:00 UTC"
             )
 
         time.sleep(CHECK_INTERVAL)
