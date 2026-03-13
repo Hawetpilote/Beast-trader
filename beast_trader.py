@@ -13,9 +13,31 @@
 ║  يفحص كل 15 دقيقة تلقائياً                                  ║
 ╚══════════════════════════════════════════════════════════════╝
 """
-import os, time, requests
+import os, time, requests, threading
+from http.server import HTTPServer, BaseHTTPRequestHandler
 from datetime import datetime, timezone
 from collections import defaultdict
+
+# ═══════════════════════════════════════════
+# HTTP SERVER — يمنع Railway من إيقاف البوت
+# ═══════════════════════════════════════════
+class HealthHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.end_headers()
+        uptime = int(time.time() - START_TIME)
+        self.wfile.write(
+            f"Beast Trader v6 ✅ | uptime: {uptime}s | signals: {SIGNAL_COUNTER[0]}".encode()
+        )
+    def log_message(self, *args): pass  # نوقف logs الـ HTTP
+
+def run_health_server():
+    port = int(os.environ.get("PORT", 8080))
+    server = HTTPServer(("0.0.0.0", port), HealthHandler)
+    server.serve_forever()
+
+START_TIME     = time.time()
+SIGNAL_COUNTER = [0]  # mutable للمشاركة مع threads
 
 # ═══════════════════════════════════════════
 # CONFIG
@@ -450,8 +472,14 @@ def main():
     print(f"  الحساب:  Demo Exness ${ACCOUNT_SIZE}")
     print(f"  الريسك:  {RISK_PERCENT}% لكل صفقة\n")
 
+    # تشغيل HTTP server في thread منفصل
+    http_thread = threading.Thread(target=run_health_server, daemon=True)
+    http_thread.start()
+    print(f"  🌐 Health server شغّال على PORT {os.environ.get('PORT', 8080)}")
+
     # إشعار بدء التشغيل — مع تأخير لتجنب التكرار عند restart
-    time.sleep(10)
+    # انتظر 15 ثانية — إذا Railway أعاد التشغيل سريعاً نتجنب spam
+    time.sleep(15)
     start_time = datetime.now(tz=timezone.utc).strftime("%H:%M UTC")
     tg_send(
         f"🚀 <b>Beast Trader v6 شغّال!</b>\n"
@@ -502,6 +530,7 @@ def main():
                 signals_found.append(sig)
                 mark_signal(name)
                 signal_count += 1
+                SIGNAL_COUNTER[0] += 1
                 print(f"  🎯 إشارة! {name} {sig['direction']} @ {sig['price']:.5f}")
                 tg_signal(
                     sig["pair"], sig["direction"], sig["price"],
@@ -515,9 +544,10 @@ def main():
         if not signals_found:
             print(f"  ✓ لا إشارات — إجمالي الإشارات: {signal_count}")
 
-        # تقرير يومي الساعة 21:00 UTC — مرة واحدة فقط
+        # تقرير يومي الساعة 21:00 UTC — فقط إذا البوت شغّال أكثر من 5 دقائق
         today_str = now_utc.strftime('%Y-%m-%d')
-        if now_utc.hour == 21 and today_str not in daily_report_sent:
+        bot_uptime = time.time() - START_TIME
+        if now_utc.hour == 21 and today_str not in daily_report_sent and bot_uptime > 300:
             daily_report_sent.add(today_str)
             tg_send(
                 f"📊 <b>تقرير يومي — {today_str}</b>\n"
