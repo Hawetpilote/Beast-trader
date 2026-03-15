@@ -214,8 +214,7 @@ def check_signal(candles, pair, tf_label):
     c  = candles[i]
     ts = c["time"]
 
-    # جلسة + عطلة
-    if not in_sess(ts): return None
+    # عطلة فقط — يشتغل كل الأوقات 24/7
     if datetime.fromtimestamp(ts,tz=timezone.utc).weekday() >= 5: return None
 
     # المؤشرات
@@ -350,7 +349,7 @@ def main():
             f"📊 BTC · ETH · GBP · EUR · XAU · QQQ\n"
             f"⏱️ 1m · 5m · 15m · 1H · 4H\n"
             f"🎯 SL/TP محسوب لكل زوج × فريم\n"
-            f"📍 London + NY Sessions فقط\n"
+            f"📍 24/7 — كل الأوقات\n"
             f"⏰ بدأ: {now_str}\n"
             f"━━━━━━━━━━━━━━━━━━━━━━━━\n"
             f"⚡ <i>AI-X ELITE PRO — Pine Script Logic</i>"
